@@ -1,33 +1,43 @@
 # Kuro
 
-This template should help get you started developing with Vue 3 in Vite.
+📦 A minimalist CLI for copying ready-to-use Vue 3 components and optionally setting up Tailwind CSS v4.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Quickly copy Vue 3 components from the curated `components/ui` library into your project.
+- Interactive Tailwind CSS v4 installation and configuration.
+- Automatic update of your `vite.config.js` to include the Tailwind plugin.
+- Customizable CSS entry file path for Tailwind imports.
 
-## Type Support for `.vue` Imports in TS
+## Usage
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### Initialize Tailwind CSS v4
 
-## Customize configuration
+Interactively install Tailwind CSS v4, add the necessary import to your main CSS file, and update your `vite.config.js`:
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```bash
+npx github:Bartek-Nowak/Kuro init
 ```
 
-### Compile and Hot-Reload for Development
+### Copy a Vue component
 
-```sh
-npm run dev
+Copies a component (e.g. `Button.vue`) into your project’s `src/components/ui` directory:
+
+```bash
+npx github:Bartek-Nowak/Kuro add button
 ```
 
-### Type-Check, Compile and Minify for Production
+The CLI will prompt you to confirm installation and specify your main CSS file path (defaults to `src/assets/main.css`).
 
-```sh
-npm run build
-```
+## Requirements
+
+- Node.js v14 or higher
+- A Vue 3 project structure with Vite (for automatic `vite.config.js` update)
+
+## Installation
+
+No installation required — just run via `npx` from GitHub.
+
+## License
+
+MIT

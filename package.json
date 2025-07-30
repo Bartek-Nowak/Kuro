@@ -1,8 +1,19 @@
 {
   "name": "kuro",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.0",
+  "bin": {
+    "kuro": "./bin/cli.js"
+  },
   "type": "module",
+  "keywords": [
+    "vue",
+    "component",
+    "ui",
+    "copy"
+  ],
+  "description": "Minimalist Vue components ready to copy and use",
+  "author": "Bartłomiej Nowak",
+  "license": "MIT",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
@@ -20,7 +31,9 @@
     "@tailwindcss/vite": "^4.1.11",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.11",
-    "vue": "^3.5.18"
+    "vue": "^3.5.18",
+    "prompts": "^2.4.2",
+    "execa": "^8.0.1"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",
@@ -35,3 +48,4 @@
     "vue-tsc": "^3.0.4"
   }
 }
+

@@ -24,6 +24,7 @@ export default defineConfig({
         items: [
           { text: 'Allert', link: '/components/allert' },
           { text: 'Button', link: '/components/button' },
+          { text: 'Callout', link: '/components/callout' },
         ],
       },
     ],

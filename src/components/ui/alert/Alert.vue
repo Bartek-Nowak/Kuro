@@ -14,7 +14,7 @@ const descriptionTag = props.descriptionTag ?? 'p';
 </script>
 
 <template>
-  <div :class="getAlertClasses(props.class, { variant: props.variant, size: props.size })">
+  <div :class="getAlertClasses({ variant: props.variant, size: props.size }, props.class)">
     <div class="space-y-1" v-if="$slots.title || $slots.description">
       <component :is="titleTag" v-if="$slots.title" class="font-semibold">
         <slot name="title" />

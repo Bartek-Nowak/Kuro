@@ -1,6 +1,7 @@
-import { twMerge } from 'tailwind-merge';
+import { getClasses } from '@/utils/getClasses';
 
 export const calloutVariants = {
+  base: '',
   variant: {
     default: 'border-border bg-muted text-foreground',
     info: 'border-blue-400 bg-blue-50 text-blue-900',
@@ -14,16 +15,15 @@ export type CalloutVariants = {
   variant?: keyof typeof calloutVariants.variant;
 };
 
-export function getCalloutClasses(
-  baseClass?: string,
-  opts: CalloutVariants = {}
-) {
-  const { variant = 'default' } = opts;
-  return twMerge(
-    'border relative rounded-lg p-4 flex items-start gap-3',
-    calloutVariants.variant[variant],
-    baseClass
+export const getCalloutClasses = (
+  opts: CalloutVariants = {},
+  extraClasses: string = ''
+) => {
+  return getClasses(
+    calloutVariants.base,
+    calloutVariants.variant[opts.variant ?? 'default'],
+    extraClasses
   );
-}
+};
 
 export { default as Callout } from './Callout.vue';

@@ -7,7 +7,7 @@ const props = defineProps<ButtonVariants & { as?: string, class?: string }>()
 <template>
   <component
     :is="as || 'button'"
-    :class="getButtonClasses(props.class, { variant: variant, size: size })"
+    :class="getButtonClasses({ variant: variant, size: size }, props.class)"
   >
     <slot />
   </component>

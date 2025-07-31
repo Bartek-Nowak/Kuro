@@ -18,6 +18,12 @@
     "requires": []
   },
   {
+    "name": "progress",
+    "path": "progress",
+    "description": "Displays the current status of a process in a visual bar format. Useful for loading, uploading, or indicating task completion.",
+    "requires": []
+  },
+  {
     "name": "stat",
     "path": "stat",
     "description": "Presents numerical metrics or KPIs in a compact visual block.",

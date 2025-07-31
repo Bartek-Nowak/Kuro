@@ -4,22 +4,24 @@ layout: home
 
 hero:
   name: "Kuro"
-  text: "Minimalist Vue components ready to copy and use"
-  tagline: My great project tagline
+  text: "Quickly copy UI components and streamline Tailwind integration"
+  tagline: "Minimalist CLI for Vue 3 components and Tailwind CSS v4 setup"
   actions:
     - theme: brand
       text: Get Started
-      link: /guide
+      link: /guide/
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Components
+      link: /components/button
+    - theme: alt
+      text: GitHub
+      link: https://github.com/Bartek-Nowak/Kuro
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Ready-to-use Vue 3 Components
+    details: Copy curated and tested UI components into your project instantly.
+  - title: Tailwind CSS v4 Integration
+    details: Interactive installation and automatic Vite config updates.
+  - title: Minimal Setup, Maximum Productivity
+    details: No prior installation required — run via npx and start building fast.
 ---
-

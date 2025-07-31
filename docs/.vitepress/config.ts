@@ -33,6 +33,7 @@ export default defineConfig({
           { text: 'Allert', link: '/components/allert' },
           { text: 'Button', link: '/components/button' },
           { text: 'Callout', link: '/components/callout' },
+          { text: 'Icon Toggle', link: '/components/icon-toggle' },
           { text: 'Progress', link: '/components/progress' },
           { text: 'Progressive Image', link: '/components/progressive-image' },
           { text: 'Stat', link: '/components/stat' },

@@ -2,6 +2,7 @@
 import { Alert } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { Callout } from '@/components/ui/callout';
+import { Stat } from './components/ui/state';
 
 const alertVariants = ['default', 'destructive', 'success', 'warning'] as const;
 const buttonVariants = ['default', 'destructive', 'outline', 'ghost', 'link'] as const;
@@ -12,19 +13,10 @@ const sizes = ['sm', 'md', 'lg'] as const;
   <div class="p-4">
     <!-- Alerts -->
     <div class="space-y-6">
-      <div
-        v-for="variant in alertVariants"
-        :key="variant"
-        class="space-y-4"
-      >
+      <div v-for="variant in alertVariants" :key="variant" class="space-y-4">
         <h3 class="font-semibold capitalize">{{ variant }} variant</h3>
         <div class="flex flex-wrap gap-4">
-          <Alert
-            v-for="size in sizes"
-            :key="variant + '-' + size"
-            :variant="variant"
-            :size="size"
-          >
+          <Alert v-for="size in sizes" :key="variant + '-' + size" :variant="variant" :size="size">
             <template #title>
               {{ variant }} alert
             </template>
@@ -84,23 +76,28 @@ const sizes = ['sm', 'md', 'lg'] as const;
 
     <!-- Buttons -->
     <div class="space-y-6 mt-10">
-      <div
-        v-for="variant in buttonVariants"
-        :key="variant"
-        class="space-y-4"
-      >
+      <div v-for="variant in buttonVariants" :key="variant" class="space-y-4">
         <h3 class="font-semibold capitalize">{{ variant }} variant</h3>
         <div class="flex flex-wrap gap-4">
-          <Button
-            v-for="size in sizes"
-            :key="variant + '-' + size"
-            :variant="variant"
-            :size="size"
-          >
+          <Button v-for="size in sizes" :key="variant + '-' + size" :variant="variant" :size="size">
             {{ variant }} - {{ size }}
           </Button>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Stat -->
+  <Stat trend="up">
+    <template #icon>📈</template>
+    <template #label>Revenue</template>
+    <template #value>$12,345</template>
+    <template #trendValue>+5%</template>
+  </Stat>
+  <Stat trend="down">
+    <template #icon>📉</template>
+    <template #label>Revenue</template>
+    <template #value>$12,345</template>
+    <template #trendValue>-5%</template>
+  </Stat>
 </template>

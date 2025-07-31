@@ -9,6 +9,9 @@ import { Button } from '@/components/ui/button';
  <Button>Click</Button>
 </template>
 ```
+
+## Installation
+
 ::: code-group
 ```npx
 npx github:Bartek-Nowak/Kuro add button

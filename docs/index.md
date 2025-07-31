@@ -6,6 +6,9 @@ hero:
   name: "Kuro"
   text: "Quickly copy UI components and streamline Tailwind integration"
   tagline: "Minimalist CLI for Vue 3 components and Tailwind CSS v4 setup"
+  image:
+    src: /kuro-logo.png
+    alt: Kuro logo
   actions:
     - theme: brand
       text: Get Started

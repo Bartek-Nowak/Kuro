@@ -1,6 +1,7 @@
-import { twMerge } from 'tailwind-merge';
+import { getClasses } from '@/utils/getClasses';
 
 export const alertVariants = {
+  base: 'inline-flex items-center justify-between font-medium',
   variant: {
     default: 'bg-blue-100 text-blue-800 border border-blue-300',
     destructive: 'bg-red-100 text-red-800 border border-red-300',
@@ -19,17 +20,16 @@ export type AlertVariants = {
   size?: keyof typeof alertVariants.size;
 };
 
-export function getAlertClasses(
-  baseClass: string | undefined,
-  opts: AlertVariants = {}
-) {
-  const { variant = 'default', size = 'md' } = opts;
-  return twMerge(
-    'inline-flex items-center justify-between font-medium',
-    alertVariants.variant[variant],
-    alertVariants.size[size],
-    baseClass
+export const getAlertClasses = (
+  opts: AlertVariants = {},
+  extraClasses: string = ''
+) => {
+  return getClasses(
+    alertVariants.base,
+    alertVariants.variant[opts.variant ?? 'default'],
+    alertVariants.size[opts.size ?? 'md'],
+    extraClasses
   );
-}
+};
 
 export { default as Alert } from './Alert.vue';

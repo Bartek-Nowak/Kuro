@@ -1,6 +1,7 @@
-import {twMerge} from 'tailwind-merge';
+import { getClasses } from '@/utils/getClasses';
 
-export const variants = {
+export const buttonVariants = {
+  base: 'inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none',
   variant: {
     default:
       'bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-600',
@@ -20,21 +21,20 @@ export const variants = {
 };
 
 export type ButtonVariants = {
-  variant?: keyof typeof variants.variant;
-  size?: keyof typeof variants.size;
+  variant?: keyof typeof buttonVariants.variant;
+  size?: keyof typeof buttonVariants.size;
 };
 
-export function getButtonClasses(
-  baseClass: string | undefined,
-  opts: ButtonVariants = {}
-) {
-  const {variant = 'default', size = 'md'} = opts;
-  return twMerge(
-    'inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none',
-    variants.variant[variant],
-    variants.size[size],
-    baseClass
+export const getButtonClasses = (
+  opts: ButtonVariants = {},
+  extraClasses: string = ''
+) => {
+  return getClasses(
+    buttonVariants.base,
+    buttonVariants.variant[opts.variant ?? 'default'],
+    buttonVariants.size[opts.size ?? 'md'],
+    extraClasses
   );
-}
+};
 
-export {default as Button} from './Button.vue';
+export { default as Button } from './Button.vue';

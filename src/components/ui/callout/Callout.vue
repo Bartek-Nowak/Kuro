@@ -5,7 +5,7 @@ const props = defineProps<CalloutVariants & { class?: string }>();
 </script>
 
 <template>
-  <div :class="getCalloutClasses(props.class, { variant: variant })">
+  <div :class="getCalloutClasses({ variant: variant }, props.class)">
     <div v-if="$slots.icon" class="pt-0.5">
       <slot name="icon" />
     </div>

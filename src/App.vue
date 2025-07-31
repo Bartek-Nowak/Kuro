@@ -34,7 +34,7 @@ const sizes = ['sm', 'md', 'lg'] as const;
       <div class="space-y-4">
         <Callout variant="info">
           <template #icon>
-            <span class="text-blue-500">ℹ️</span>
+            <span>ℹ️</span>
           </template>
           <template #title>
             Info callout
@@ -44,7 +44,7 @@ const sizes = ['sm', 'md', 'lg'] as const;
 
         <Callout variant="success">
           <template #icon>
-            <span class="text-green-500">✅</span>
+            <span>✅</span>
           </template>
           <template #title>
             Success callout
@@ -54,7 +54,7 @@ const sizes = ['sm', 'md', 'lg'] as const;
 
         <Callout variant="warning">
           <template #icon>
-            <span class="text-yellow-500">⚠️</span>
+            <span>⚠️</span>
           </template>
           <template #title>
             Warning callout
@@ -64,7 +64,7 @@ const sizes = ['sm', 'md', 'lg'] as const;
 
         <Callout variant="danger">
           <template #icon>
-            <span class="text-red-500">🛑</span>
+            <span>🛑</span>
           </template>
           <template #title>
             Danger callout

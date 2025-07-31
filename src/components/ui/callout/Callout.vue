@@ -6,7 +6,7 @@ const props = defineProps<CalloutVariants & { class?: string }>();
 
 <template>
   <div :class="getCalloutClasses({ variant: variant }, props.class)">
-    <div v-if="$slots.icon" class="pt-0.5">
+    <div v-if="$slots.icon" class="flex items-center p-1">
       <slot name="icon" />
     </div>
     <div class="space-y-1">

@@ -6,6 +6,7 @@ import { ProgressiveImage } from '@/components/ui/progressive-image';
 import { Progress } from '@/components/ui/progress';
 import { Stat } from './components/ui/stat';
 import { Text } from '@/components/ui/text';
+import { IconToggle } from '@/components/ui/icon-toggle'
 
 const alertVariants = ['default', 'destructive', 'success', 'warning'] as const;
 const buttonVariants = ['default', 'destructive', 'outline', 'ghost', 'link'] as const;
@@ -78,24 +79,19 @@ const textVariants = ['default', 'primary', 'secondary', 'muted', 'destructive',
       </div>
     </div>
 
-    <ProgressiveImage :width="256" :height="256" variant="bounce"
-      src="x"
-      alt="Random landscape" />
-    <ProgressiveImage :width="256" :height="256" variant="flash"
-      src="x"
-      alt="Random landscape" />
-    <ProgressiveImage :width="256" :height="256" variant="ping"
-      src="x"
-      alt="Random landscape" />
-    <ProgressiveImage :width="256" :height="256" variant="shimmer_simple"
-      src="x"
-      alt="Random landscape" />
-    <ProgressiveImage :width="256" :height="256" variant="spin"
-      src="x"
-      alt="Random landscape" />
-    <ProgressiveImage :width="256" :height="256"
-      src="x"
-      alt="Random landscape" />
+    <IconToggle>
+      🙂
+      <template #alt>
+      😡
+      </template>
+    </IconToggle>
+
+    <ProgressiveImage :width="256" :height="256" variant="bounce" src="x" alt="Random landscape" />
+    <ProgressiveImage :width="256" :height="256" variant="flash" src="x" alt="Random landscape" />
+    <ProgressiveImage :width="256" :height="256" variant="ping" src="x" alt="Random landscape" />
+    <ProgressiveImage :width="256" :height="256" variant="shimmer_simple" src="x" alt="Random landscape" />
+    <ProgressiveImage :width="256" :height="256" variant="spin" src="x" alt="Random landscape" />
+    <ProgressiveImage :width="256" :height="256" src="x" alt="Random landscape" />
 
     <!-- Buttons -->
     <div class="space-y-6 mt-10">

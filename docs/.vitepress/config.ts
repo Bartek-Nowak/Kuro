@@ -26,6 +26,7 @@ export default defineConfig({
           { text: 'Button', link: '/components/button' },
           { text: 'Callout', link: '/components/callout' },
           { text: 'Stat', link: '/components/stat' },
+          { text: 'Text', link: '/components/text' },
         ],
       },
     ],

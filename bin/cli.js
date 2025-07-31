@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { add } from './add.js';
 import { init } from './init.js';
+import { list } from './list.js';
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 const componentsDir = path.resolve(dirname, '../src/components/ui');
@@ -17,6 +18,11 @@ const main = async () => {
 
   if (cmd === 'init') {
     await init(dirname);
+    return;
+  }
+
+  if (cmd === 'list') {
+    list(dirname);
     return;
   }
 

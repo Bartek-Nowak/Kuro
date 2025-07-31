@@ -18,15 +18,21 @@
     "requires": []
   },
   {
-    "name": "progressive-image",
-    "path": "progressive-image",
-    "description": "Displays an image with a stylish loading animation until fully loaded.",
+    "name": "icon-toggle",
+    "path": "icon-toggle",
+    "description": "Toggles between two icons with animated transitions on hover",
     "requires": []
   },
   {
     "name": "progress",
     "path": "progress",
     "description": "Displays the current status of a process in a visual bar format. Useful for loading, uploading, or indicating task completion.",
+    "requires": []
+  },
+  {
+    "name": "progressive-image",
+    "path": "progressive-image",
+    "description": "Displays an image with a stylish loading animation until fully loaded.",
     "requires": []
   },
   {

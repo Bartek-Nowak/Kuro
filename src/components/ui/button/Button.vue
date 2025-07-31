@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import { getButtonClasses, type ButtonVariants } from '.'
 
 const props = defineProps<ButtonVariants & { as?: string, class?: string }>()
@@ -7,8 +6,8 @@ const props = defineProps<ButtonVariants & { as?: string, class?: string }>()
 
 <template>
   <component
-    :is="props.as || 'button'"
-    :class="getButtonClasses(props.class, { variant: props.variant, size: props.size })"
+    :is="as || 'button'"
+    :class="getButtonClasses(props.class, { variant: variant, size: size })"
   >
     <slot />
   </component>

@@ -2,7 +2,8 @@
 import { Alert } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { Callout } from '@/components/ui/callout';
-import { Stat } from './components/ui/stat'; // poprawiony import
+import { Progress } from '@/components/ui/progress';
+import { Stat } from './components/ui/stat';
 import { Text } from '@/components/ui/text';
 
 const alertVariants = ['default', 'destructive', 'success', 'warning'] as const;
@@ -86,6 +87,16 @@ const textVariants = ['default', 'primary', 'secondary', 'muted', 'destructive',
           </Button>
         </div>
       </div>
+    </div>
+
+    <!-- Progress -->
+    <div class="space-y-6 mt-10">
+      <Progress :value="45" variant="determinate" />
+      <Progress :value="25" variant="success" />
+      <Progress :value="35" variant="warning" />
+      <Progress :value="25" variant="error" />
+      <Progress :value="85" variant="accent" />
+      <Progress :value="95" variant="muted" />
     </div>
 
     <!-- Stat -->

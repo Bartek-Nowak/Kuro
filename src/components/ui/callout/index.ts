@@ -1,7 +1,7 @@
 import { getClasses } from '@/utils/getClasses';
 
 export const calloutVariants = {
-  base: '',
+  base: 'flex gap-2 p-2',
   variant: {
     default: 'border-border bg-muted text-foreground',
     info: 'border-blue-400 bg-blue-50 text-blue-900',

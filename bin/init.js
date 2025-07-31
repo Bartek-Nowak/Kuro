@@ -1,0 +1,23 @@
+import fs from 'fs';
+import { installTailwind } from './installTailwind';
+import { copyFolderRecursiveSync } from './copyFolderRecursiveSync';
+
+export const init = async (dirname) => {
+  await installTailwind();
+  await execa('npm', ['install', 'tailwind-merge'], {stdio: 'inherit'});
+  console.log('✅ tailwind-merge installed');
+
+  const utilsSourceDir = path.resolve(dirname, '../src/utils/kuro');
+  const utilsDestDir = path.resolve(process.cwd(), 'src/utils/kuro');
+
+  if (!fs.existsSync(utilsSourceDir)) {
+    console.error(`❌ Source utils folder not found: ${utilsSourceDir}`);
+    process.exit(1);
+  }
+
+  fs.mkdirSync(utilsDestDir, {recursive: true});
+  copyFolderRecursiveSync(utilsSourceDir, utilsDestDir);
+  console.log(`✅ Copied utils kuro folder to ${utilsDestDir}`);
+
+  return;
+};

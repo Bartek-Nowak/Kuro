@@ -20,6 +20,14 @@ export default defineConfig({
         ],
       },
       {
+        text: 'CLI',
+        items: [
+          {text: 'add', link: '/cli/add'},
+          {text: 'init', link: '/cli/init'},
+          {text: 'list', link: '/cli/list'},
+        ],
+      },
+      {
         text: 'Components',
         items: [
           { text: 'Allert', link: '/components/allert' },

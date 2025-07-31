@@ -1,4 +1,4 @@
-import { getClasses } from '@/utils/getClasses';
+import { getClasses } from '@/utils/kuro/getClasses';
 
 export const alertVariants = {
   base: 'inline-flex items-center justify-between font-medium',

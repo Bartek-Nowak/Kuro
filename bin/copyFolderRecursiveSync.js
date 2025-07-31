@@ -1,3 +1,6 @@
+import fs from 'fs';
+import path from 'path';
+
 export const copyFolderRecursiveSync = (source, target) => {
   const files = fs.readdirSync(source, { withFileTypes: true })
   files.forEach(file => {

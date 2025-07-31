@@ -1,6 +1,8 @@
 import fs from 'fs';
-import { installTailwind } from './installTailwind';
-import { copyFolderRecursiveSync } from './copyFolderRecursiveSync';
+import path from 'path';
+import { execa } from 'execa'
+import { installTailwind } from './installTailwind.js';
+import { copyFolderRecursiveSync } from './copyFolderRecursiveSync.js';
 
 export const init = async (dirname) => {
   await installTailwind();

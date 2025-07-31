@@ -1,3 +1,6 @@
+import fs from 'fs';
+import path from 'path';
+
 export const updateViteConfig = async() => {
   const viteConfigPath = path.resolve(process.cwd(), 'vite.config.ts')
   if (!fs.existsSync(viteConfigPath)) {

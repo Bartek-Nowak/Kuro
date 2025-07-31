@@ -1,6 +1,8 @@
+import fs from 'fs';
+import path from 'path';
 import prompts from 'prompts'
 import { execa } from 'execa'
-import { updateViteConfig } from "./updateViteConfig"
+import { updateViteConfig } from "./updateViteConfig.js"
 
 export const installTailwind = async () => {
   const { installTailwind } = await prompts({

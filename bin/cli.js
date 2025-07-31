@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { add } from './add';
-import { init } from './init';
+import { add } from './add.js';
+import { init } from './init.js';
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 const componentsDir = path.resolve(dirname, '../src/components/ui');
@@ -11,7 +11,7 @@ const [, , cmd, name] = process.argv;
 
 const main = async () => {
   if (cmd === 'add') {
-    await add(name, componentsDir);
+    await add(name, componentsDir, dirname);
     return;
   }
 

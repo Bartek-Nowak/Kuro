@@ -2,15 +2,17 @@
 import { Alert } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { Callout } from '@/components/ui/callout';
-import { Stat } from './components/ui/state';
+import { Stat } from './components/ui/stat'; // poprawiony import
+import { Text } from '@/components/ui/text';
 
 const alertVariants = ['default', 'destructive', 'success', 'warning'] as const;
 const buttonVariants = ['default', 'destructive', 'outline', 'ghost', 'link'] as const;
 const sizes = ['sm', 'md', 'lg'] as const;
+const textVariants = ['default', 'primary', 'secondary', 'muted', 'destructive', 'success', 'warning', 'info'] as const;
 </script>
 
 <template>
-  <div class="p-4">
+  <div class="p-4 space-y-16">
     <!-- Alerts -->
     <div class="space-y-6">
       <div v-for="variant in alertVariants" :key="variant" class="space-y-4">
@@ -85,19 +87,35 @@ const sizes = ['sm', 'md', 'lg'] as const;
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Stat -->
-  <Stat trend="up">
-    <template #icon>📈</template>
-    <template #label>Revenue</template>
-    <template #value>$12,345</template>
-    <template #trendValue>+5%</template>
-  </Stat>
-  <Stat trend="down">
-    <template #icon>📉</template>
-    <template #label>Revenue</template>
-    <template #value>$12,345</template>
-    <template #trendValue>-5%</template>
-  </Stat>
+    <!-- Stat -->
+    <div>
+      <Stat trend="up">
+        <template #icon>📈</template>
+        <template #label>Revenue</template>
+        <template #value>$12,345</template>
+        <template #trendValue>+5%</template>
+      </Stat>
+      <Stat trend="down" class="mt-6">
+        <template #icon>📉</template>
+        <template #label>Revenue</template>
+        <template #value>$12,345</template>
+        <template #trendValue>-5%</template>
+      </Stat>
+    </div>
+
+    <!-- Text -->
+    <!-- Alerts -->
+    <div class="space-y-6">
+      <div v-for="variant in textVariants" :key="variant" class="space-y-4">
+        <h3 class="font-semibold capitalize">{{ variant }} variant</h3>
+        <div class="flex flex-wrap gap-4">
+          <Text v-for="size in sizes" :key="variant + '-' + size" :variant="variant" :size="size">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi nam ipsa error, architecto at dolorum
+            consequatur distinctio velit labore ratione? Omnis dicta ad ipsum quis, molestias earum natus eius in.
+          </Text>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

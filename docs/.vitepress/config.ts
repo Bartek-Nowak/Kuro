@@ -34,6 +34,7 @@ export default defineConfig({
           { text: 'Button', link: '/components/button' },
           { text: 'Callout', link: '/components/callout' },
           { text: 'Progress', link: '/components/progress' },
+          { text: 'Progressive Image', link: '/components/progressive-image' },
           { text: 'Stat', link: '/components/stat' },
           { text: 'Text', link: '/components/text' },
         ],

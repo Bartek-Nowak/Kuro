@@ -18,6 +18,12 @@
     "requires": []
   },
   {
+    "name": "progressive-image",
+    "path": "progressive-image",
+    "description": "Displays an image with a stylish loading animation until fully loaded.",
+    "requires": []
+  },
+  {
     "name": "progress",
     "path": "progress",
     "description": "Displays the current status of a process in a visual bar format. Useful for loading, uploading, or indicating task completion.",

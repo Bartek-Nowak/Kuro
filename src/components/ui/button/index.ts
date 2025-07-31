@@ -1,4 +1,4 @@
-import { getClasses } from '@/utils/getClasses';
+import { getClasses } from '@/utils/kuro/getClasses';
 
 export const buttonVariants = {
   base: 'inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none',

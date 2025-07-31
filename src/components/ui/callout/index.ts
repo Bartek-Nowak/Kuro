@@ -1,4 +1,4 @@
-import { getClasses } from '@/utils/getClasses';
+import { getClasses } from '@/utils/kuro/getClasses';
 
 export const calloutVariants = {
   base: 'flex gap-2 p-2',

@@ -1,19 +1,48 @@
 import fs from 'fs';
-import { copyFolderRecursiveSync } from './copyFolderRecursiveSync';
+import path from 'path';
+import {copyFolderRecursiveSync} from './copyFolderRecursiveSync.js';
+import {execa} from 'execa';
 
-export const add = async (name, componentsDir) => {
+export const add = async (name, componentsDir, dirname) => {
   if (!name) {
     console.error('❌ No component name provided');
     process.exit(1);
   }
 
+  const metaPath = path.resolve(dirname, '../meta.json');
+  const meta = JSON.parse(fs.readFileSync(metaPath, 'utf-8'));
+
   const folderName = name.toLowerCase();
+
+  const componentMeta = meta.find((c) => c.name === folderName);
+  if (!componentMeta) {
+    console.error(`❌ Component metadata not found for: ${folderName}`);
+    process.exit(1);
+  }
+
+  if (componentMeta.requires && componentMeta.requires.length > 0) {
+    console.log(
+      `ℹ️ Installing dependencies for ${folderName}: ${componentMeta.requires.join(
+        ', '
+      )}`
+    );
+    try {
+      await execa('npm', ['install', ...componentMeta.requires], {
+        stdio: 'inherit',
+      });
+      console.log(`✅ Dependencies installed for ${folderName}`);
+    } catch (error) {
+      console.error(`❌ Failed to install dependencies for ${folderName}`);
+      process.exit(1);
+    }
+  }
+
   const sourceDir = path.join(componentsDir, folderName);
   const destDir = path.join(
     process.cwd(),
     'src',
     'components',
-    'ui',
+    'kuro',
     folderName
   );
 
@@ -25,5 +54,4 @@ export const add = async (name, componentsDir) => {
   fs.mkdirSync(destDir, {recursive: true});
   copyFolderRecursiveSync(sourceDir, destDir);
   console.log(`✅ Copied ${folderName} folder to ${destDir}`);
-  return;
 };

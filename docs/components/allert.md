@@ -15,7 +15,7 @@ import { Alert } from '@/components/ui/alert';
 ## Installation
 
 ::: code-group
-```npx
+```bash
 npx github:Bartek-Nowak/Kuro add allert
 ```
 :::

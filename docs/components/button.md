@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/button';
 ## Installation
 
 ::: code-group
-```npx
+```bash
 npx github:Bartek-Nowak/Kuro add button
 ```
 :::

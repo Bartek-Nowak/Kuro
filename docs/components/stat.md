@@ -18,7 +18,7 @@ import {Stat} from '@/components/ui/stat';
 ## Installation
 
 ::: code-group
-```npx
+```bash
 npx github:Bartek-Nowak/Kuro add stat
 ```
 :::

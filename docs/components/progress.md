@@ -18,7 +18,7 @@ const progressValue = ref(45)
 ## Installation
 
 ::: code-group
-```npx
+```bash
 npx github:Bartek-Nowak/Kuro add progress
 ```
 :::

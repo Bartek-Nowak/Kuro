@@ -3,7 +3,7 @@
 Kuro was developed with TypeScript in mind, so it assumes your Vue 3 project is using TypeScript for best compatibility.
 
 ::: code-group
-```npx
+```bash
 npx github:Bartek-Nowak/Kuro init
 ```
 :::

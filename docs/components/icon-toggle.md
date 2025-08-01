@@ -19,7 +19,7 @@ import { Eye, EyeOff } from 'lucide-vue-next'
 ## Installation
 
 ::: code-group
-```npx
+```bash
 npx github:Bartek-Nowak/Kuro add icon-toggle
 ```
 :::

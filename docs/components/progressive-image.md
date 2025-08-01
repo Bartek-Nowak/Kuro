@@ -19,7 +19,7 @@ import { ProgressiveImage } from '@/components/ui/progressive-image';
 ## Installation
 
 ::: code-group
-```npx
+```bash
 npx github:Bartek-Nowak/Kuro add progressive-image.md
 ```
 :::

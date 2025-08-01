@@ -16,7 +16,7 @@ import { Callout } from '@/components/ui/callout';
 ## Installation
 
 ::: code-group
-```npx
+```bash
 npx github:Bartek-Nowak/Kuro add callout
 ```
 :::

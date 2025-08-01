@@ -14,7 +14,7 @@ import {Text} from '@/components/ui/text';
 
 ::: code-group
 
-```npx
+```bash
 npx github:Bartek-Nowak/Kuro add text
 ```
 

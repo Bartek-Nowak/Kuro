@@ -41,6 +41,7 @@ export default defineConfig({
           { text: 'Progress', link: '/components/progress' },
           { text: 'Progressive Image', link: '/components/progressive-image' },
           { text: 'Stat', link: '/components/stat' },
+          { text: 'Switch', link: '/components/switch' },
           { text: 'Text', link: '/components/text' },
         ],
       },

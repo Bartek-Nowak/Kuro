@@ -1,13 +1,18 @@
 import {getClasses} from '@/utils/kuro/getClasses';
 
 export const avatarVariants = {
-  base: 'inline-flex items-center justify-center rounded-full bg-gray-300 text-gray-700 font-semibold select-none overflow-hidden',
+  base: 'inline-flex items-center justify-center rounded-full font-semibold select-none overflow-hidden',
   variant: {
-    default: 'bg-gray-200 text-gray-800',
-    success: 'bg-green-100 text-green-800',
-    warning: 'bg-yellow-100 text-yellow-800',
-    error: 'bg-red-100 text-red-800',
-    info: 'bg-blue-100 text-blue-800',
+    default:
+      'bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100',
+    success:
+      'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100',
+    warning:
+      'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-100',
+    error:
+      'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-100',
+    info:
+      'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100',
   },
   size: {
     sm: 'w-8 h-8 text-sm',
@@ -15,6 +20,7 @@ export const avatarVariants = {
     lg: 'w-16 h-16 text-lg',
   },
 };
+
 
 export type AvatarVariants = {
   size?: keyof typeof avatarVariants.size;

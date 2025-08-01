@@ -89,5 +89,12 @@
     "description": "Typography component supporting variants and semantic tags.",
     "dependencies": [],
     "requires": []
+  },
+  {
+    "name": "toast",
+    "path": "toast",
+    "description": "Small, temporary notifications appearing at the top or bottom of the screen.",
+    "dependencies": [],
+    "requires": ["button", "text"]
   }
 ]

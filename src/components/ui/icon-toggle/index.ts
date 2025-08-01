@@ -3,11 +3,11 @@ import { getClasses } from '@/utils/kuro/getClasses';
 export const iconToggleVariants = {
   base: 'absolute inset-0 transition-all duration-300',
   variant: {
-    default: '*:text-foreground',
-    info: '*:text-blue-600',
-    success: '*:text-green-600',
-    warning: '*:text-yellow-600',
-    danger: '*:text-red-600',
+    default: '*:text-foreground dark:*:text-white',
+    info: '*:text-blue-600 dark:*:text-blue-400',
+    success: '*:text-green-600 dark:*:text-green-400',
+    warning: '*:text-yellow-600 dark:*:text-yellow-400',
+    danger: '*:text-red-600 dark:*:text-red-400',
   },
 };
 

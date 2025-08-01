@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Alert } from '@/components/ui/alert';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Callout } from '@/components/ui/callout';
 import { ProgressiveImage } from '@/components/ui/progressive-image';
@@ -32,6 +33,24 @@ const textVariants = ['default', 'primary', 'secondary', 'muted', 'destructive',
         </div>
       </div>
     </div>
+
+     <div class="space-y-4">
+    <div>
+      <h3 class="mb-2 font-semibold">Variants</h3>
+      <Badge variant="default">Default</Badge>
+      <Badge variant="success" class="ml-2">Success</Badge>
+      <Badge variant="warning" class="ml-2">Warning</Badge>
+      <Badge variant="error" class="ml-2">Error</Badge>
+      <Badge variant="info" class="ml-2">Info</Badge>
+    </div>
+
+    <div>
+      <h3 class="mb-2 font-semibold">Sizes</h3>
+      <Badge size="sm" variant="info">Small</Badge>
+      <Badge size="md" variant="info" class="ml-2">Medium</Badge>
+      <Badge size="lg" variant="info" class="ml-2">Large</Badge>
+    </div>
+  </div>
 
     <!-- Callout -->
     <div class="mt-10 space-y-6">

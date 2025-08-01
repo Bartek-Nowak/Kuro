@@ -9,9 +9,10 @@ import { IconToggle } from '@/components/ui/icon-toggle';
 import { ProgressiveImage, progressiveImageVariants } from '@/components/ui/progressive-image';
 import { Progress, progressVariants } from '@/components/ui/progress';
 import { Rating, ratingVariants } from '@/components/ui/rating';
-import { Stat, statVariants } from '@/components/ui/stat';
+import { Stat } from '@/components/ui/stat';
 import { Switch, switchVariants } from '@/components/ui/switch';
 import { Text, textVariants } from '@/components/ui/text';
+import { Toast, addToast, toastVariants } from '@/components/ui/toast';
 
 </script>
 
@@ -200,6 +201,19 @@ import { Text, textVariants } from '@/components/ui/text';
               </Text>
             </template>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Toast -->
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold dark:text-white">Toast</h2>
+      <div class="space-y-4">
+        <div class="space-x-4" v-for="(_, size) in toastVariants.size">
+          <p class="mb-3 font-semibold capitalize dark:text-white">Size - {{ size }}</p>
+          <Button v-for="(_, variant) in toastVariants.variant"
+            @click="addToast({ label: variant, message: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi velit eius quisquam qui ducimus magnam totam architecto. Rerum tenetur nihil reprehenderit quae cum quo maiores aliquid, aperiam distinctio amet quasi?', timeout: 3000, variant, size });">{{ variant }} </Button>
+          <Toast />
         </div>
       </div>
     </section>

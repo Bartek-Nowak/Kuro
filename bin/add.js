@@ -32,10 +32,10 @@ export const add = async (name, componentsDir, dirname) => {
     for (const requiredComponent of componentMeta.requires) {
       const requiredDestDir = path.join(process.cwd(), 'src', 'components', 'kuro', requiredComponent);
       if (!fs.existsSync(requiredDestDir)) {
-        console.log(`ℹ️ Adding required component "${requiredComponent}" for "${folderName}"`);
+        console.log(`ℹ️  Adding required component "${requiredComponent}" for "${folderName}"`);
         await add(requiredComponent, componentsDir, dirname);
       } else {
-        console.log(`ℹ️ Required component "${requiredComponent}" already exists. Skipping install.`);
+        console.log(`ℹ️  Required component "${requiredComponent}" already exists. Skipping install.`);
       }
     }
   }

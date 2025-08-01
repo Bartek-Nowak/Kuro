@@ -12,7 +12,7 @@ export const list = (dirname) => {
 
   const meta = JSON.parse(fs.readFileSync(metaPath, 'utf-8'));
 
-  console.log('\n🛠️ Available components:\n');
+  console.log('\n🛠️  Available components:\n');
 
   for (const comp of meta) {
     console.log(`🔹 ${comp.name}`);

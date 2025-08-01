@@ -44,6 +44,7 @@ export default defineConfig({
           { text: 'Stat', link: '/components/stat' },
           { text: 'Switch', link: '/components/switch' },
           { text: 'Text', link: '/components/text' },
+          { text: 'Toast', link: '/components/toast' },
         ],
       },
     ],

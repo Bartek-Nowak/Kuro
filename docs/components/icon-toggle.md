@@ -8,7 +8,7 @@ import { IconToggle } from '@/components/ui/icon-toggle';
 import { Eye, EyeOff } from 'lucide-vue-next'
 </script>
 
-<IconToggle variant="info" :active="isToggled">
+<IconToggle variant="info" mode="click">
   <Eye />
   <template #alt>
     <EyeOff />
@@ -26,8 +26,17 @@ npx github:Bartek-Nowak/Kuro add icon-toggle
 
 ## Props
 
-| Prop     | Type                                                     | Default   | Description                                 |
-|----------|----------------------------------------------------------|-----------|---------------------------------------------|
-| `active` | `boolean`                                                | `false`   | Determines which icon is currently shown    |
-| `variant`| `'default'` \| `'info'` \| `'success'` \| `'warning'` \| `'danger'` | `'default'` | Controls icon color via Tailwind classes    |
-| `class`  | `string`                                                 | `''`      | Additional classes to apply                 |
+| Prop      | Type                                                                 | Default     | Description                                                                  |
+|-----------|----------------------------------------------------------------------|-------------|------------------------------------------------------------------------------|
+| `v-model` | `boolean`                                                            | `false`     | Two-way binding for toggle state. Controls which icon is currently visible. |
+| `variant` | `'default'` \| `'info'` \| `'success'` \| `'warning'` \| `'danger'` | `'default'` | Sets icon color using Tailwind utility classes.                             |
+| `mode`    | `'click'` \| `'hover'`                                               | `'click'`   | Determines whether toggle happens on click or hover.                        |
+| `class`   | `string`                                                             | `''`        | Additional classes to apply to both icons.                                  |
+
+## Notes
+
+- The `mode` prop determines how the toggle is triggered:
+  - `'click'`: toggles on click.
+  - `'hover'`: toggles on mouseover/mouseout.
+- Uses Vue's `v-model` to control the active state.
+- `variant` is used to apply contextual color using Tailwind (e.g. `text-blue-600`, `text-red-600`).

@@ -9,6 +9,7 @@ import { IconToggle } from '@/components/ui/icon-toggle';
 import { ProgressiveImage, progressiveImageVariants } from '@/components/ui/progressive-image';
 import { Progress, progressVariants } from '@/components/ui/progress';
 import { Stat } from '@/components/ui/stat';
+import { Switch, switchVariants } from '@/components/ui/switch';
 import { Text, textVariants } from '@/components/ui/text';
 
 </script>
@@ -61,7 +62,7 @@ import { Text, textVariants } from '@/components/ui/text';
       <h2 class="mb-4 text-2xl font-semibold dark:text-white">Breadcrumb</h2>
       <div class="space-y-8">
         <template v-for="(_, variant) in breadcrumbVariants.variant">
-          <Breadcrumb v-for="(_, size) in breadcrumbVariants.size"  :items="[
+          <Breadcrumb v-for="(_, size) in breadcrumbVariants.size" :items="[
             { label: 'Home', href: '/' },
             { label: 'Library', href: '/library' },
             { label: 'Data', disabled: true }
@@ -154,6 +155,20 @@ import { Text, textVariants } from '@/components/ui/text';
           <template #value>$12,345</template>
           <template #trendValue>-5%</template>
         </Stat>
+      </div>
+    </section>
+
+    <!-- Switch -->
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold dark:text-white">Switch</h2>
+      <div class="space-y-8">
+        <div v-for="(_, variant) in switchVariants.variant" :key="variant">
+          <h3 class="mb-3 font-semibold capitalize dark:text-white">{{ variant }} variant</h3>
+          <div class="flex flex-wrap gap-4">
+            <Switch v-for="(_, size) in switchVariants.size" :key="variant + '-' + size" :variant="variant"
+              :size="size" />
+          </div>
+        </div>
       </div>
     </section>
 

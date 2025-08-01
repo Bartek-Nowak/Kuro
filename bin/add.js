@@ -28,6 +28,18 @@ export const add = async (name, componentsDir, dirname) => {
     process.exit(1);
   }
 
+  if (componentMeta.requires && componentMeta.requires.length > 0) {
+    for (const requiredComponent of componentMeta.requires) {
+      const requiredDestDir = path.join(process.cwd(), 'src', 'components', 'kuro', requiredComponent);
+      if (!fs.existsSync(requiredDestDir)) {
+        console.log(`ℹ️ Adding required component "${requiredComponent}" for "${folderName}"`);
+        await add(requiredComponent, componentsDir, dirname);
+      } else {
+        console.log(`ℹ️ Required component "${requiredComponent}" already exists. Skipping install.`);
+      }
+    }
+  }
+
   if (fs.existsSync(destDir)) {
     const { overwrite } = await prompts({
       type: 'confirm',
@@ -44,12 +56,12 @@ export const add = async (name, componentsDir, dirname) => {
     fs.rmSync(destDir, { recursive: true, force: true });
   }
 
-  if (componentMeta.requires && componentMeta.requires.length > 0) {
+  if (componentMeta.dependencies && componentMeta.dependencies.length > 0) {
     console.log(
-      `ℹ️ Installing dependencies for ${folderName}: ${componentMeta.requires.join(', ')}`
+      `ℹ️ Installing dependencies for ${folderName}: ${componentMeta.dependencies.join(', ')}`
     );
     try {
-      await execa('npm', ['install', ...componentMeta.requires], {
+      await execa('npm', ['install', ...componentMeta.dependencies], {
         stdio: 'inherit',
       });
       console.log(`✅ Dependencies installed for ${folderName}`);

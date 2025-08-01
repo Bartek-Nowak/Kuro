@@ -60,6 +60,12 @@
     "requires": []
   },
   {
+    "name": "switch",
+    "path": "switch",
+    "description": "Interactive toggle component for switching between enabled and disabled states, commonly used in settings interfaces.",
+    "requires": []
+  },
+  {
     "name": "text",
     "path": "text",
     "description": "Typography component supporting variants and semantic tags.",

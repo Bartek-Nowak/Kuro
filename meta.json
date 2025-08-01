@@ -18,6 +18,12 @@
     "requires": []
   },
   {
+    "name": "breadcrumb",
+    "path": "breadcrumb",
+    "description": "Navigation component that displays the current page’s location within a site hierarchy, with support for variants and sizes.",
+    "requires": []
+  },
+  {
     "name": "button",
     "path": "button",
     "description": "Versatile button component with support for variants and sizes.",

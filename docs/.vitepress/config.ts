@@ -37,6 +37,7 @@ export default defineConfig({
           { text: 'Breadcrumb', link: '/components/breadcrumb' },
           { text: 'Button', link: '/components/button' },
           { text: 'Callout', link: '/components/callout' },
+          { text: 'Dialog', link: '/components/dialog' },
           { text: 'Icon Toggle', link: '/components/icon-toggle' },
           { text: 'Progress', link: '/components/progress' },
           { text: 'Progressive Image', link: '/components/progressive-image' },

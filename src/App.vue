@@ -17,7 +17,7 @@ import { Text, textVariants } from '@/components/ui/text';
 
     <!-- Avatars -->
     <section>
-      <h2 class="mb-4 text-2xl font-semibold">Avatars</h2>
+      <h2 class="mb-4 text-2xl font-semibold dark:text-white">Avatars</h2>
       <div class="flex items-center gap-4">
         <Avatar src="https://randomuser.me/api/portraits/women/44.jpg" alt="User photo" />
         <Avatar />
@@ -30,10 +30,10 @@ import { Text, textVariants } from '@/components/ui/text';
 
     <!-- Alerts -->
     <section>
-      <h2 class="mb-4 text-2xl font-semibold">Alerts</h2>
+      <h2 class="mb-4 text-2xl font-semibold dark:text-white">Alerts</h2>
       <div class="space-y-8">
         <div v-for="(_, variant) in alertVariants.variant" :key="variant">
-          <h3 class="mb-3 font-semibold capitalize">{{ variant }} variant</h3>
+          <h3 class="mb-3 font-semibold capitalize dark:text-white">{{ variant }} variant</h3>
           <div class="flex flex-wrap gap-4">
             <Alert v-for="(_, size) in alertVariants.size" :key="variant + '-' + size" :variant="variant" :size="size">
               <template #title>{{ variant }} alert</template>
@@ -46,7 +46,7 @@ import { Text, textVariants } from '@/components/ui/text';
 
     <!-- Badges -->
     <section>
-      <h2 class="mb-4 text-2xl font-semibold">Badges</h2>
+      <h2 class="mb-4 text-2xl font-semibold dark:text-white">Badges</h2>
       <div class="flex flex-wrap items-center gap-4">
         <template v-for="(_, variant) in badgeVariants.variant">
           <Badge v-for="(_, size) in badgeVariants.size" :size="size" :variant="variant">{{ variant + " " + size }}
@@ -57,10 +57,10 @@ import { Text, textVariants } from '@/components/ui/text';
 
     <!-- Buttons -->
     <section>
-      <h2 class="mb-4 text-2xl font-semibold">Buttons</h2>
+      <h2 class="mb-4 text-2xl font-semibold dark:text-white">Buttons</h2>
       <div class="space-y-8">
         <div v-for="(_, variant) in buttonVariants.variant" :key="variant">
-          <h3 class="mb-3 font-semibold capitalize">{{ variant }} variant</h3>
+          <h3 class="mb-3 font-semibold capitalize dark:text-white">{{ variant }} variant</h3>
           <div class="flex flex-wrap gap-4">
             <Button v-for="(_, size) in buttonVariants.size" :key="variant + '-' + size" :variant="variant"
               :size="size">
@@ -73,9 +73,8 @@ import { Text, textVariants } from '@/components/ui/text';
 
     <!-- Callouts -->
     <section>
-      <h2 class="mb-4 text-2xl font-semibold">Callouts</h2>
+      <h2 class="mb-4 text-2xl font-semibold dark:text-white">Callouts</h2>
       <div class="space-y-6 max-w-xl">
-
         <Callout v-for="(_, variant) in calloutVariants.variant" :variant="variant">
           <template #icon>ℹ️</template>
           <template #title>{{ variant }}</template>
@@ -86,14 +85,14 @@ import { Text, textVariants } from '@/components/ui/text';
 
     <!-- Icon Toggle -->
     <section>
-      <h2 class="mb-4 text-2xl font-semibold">Icon Toggle</h2>
+      <h2 class="mb-4 text-2xl font-semibold dark:text-white">Icon Toggle</h2>
       <div class="flex flex-col flex-wrap gap-4">
-        <p>click</p>
+        <p class="mb-3 font-semibold capitalize dark:text-white">click</p>
         <IconToggle mode="click">
           🙂
           <template #alt>😡</template>
         </IconToggle>
-        <p>hover</p>
+        <p class="mb-3 font-semibold capitalize dark:text-white">hover</p>
         <IconToggle mode="hover">
           🙂
           <template #alt>😡</template>
@@ -103,10 +102,10 @@ import { Text, textVariants } from '@/components/ui/text';
 
     <!-- Progressive Images -->
     <section>
-      <h2 class="mb-4 text-2xl font-semibold">Progressive Images</h2>
+      <h2 class="mb-4 text-2xl font-semibold dark:text-white">Progressive Images</h2>
       <div class="flex flex-wrap gap-6">
         <div v-for="(_, variant) in progressiveImageVariants.variant">
-          {{ variant }}
+          <p class="mb-3 font-semibold capitalize dark:text-white">{{ variant }}</p>
           <ProgressiveImage :width="256" :height="256" :variant="variant" src="x" alt="Random landscape" />
         </div>
       </div>
@@ -114,10 +113,10 @@ import { Text, textVariants } from '@/components/ui/text';
 
     <!-- Progress Bars -->
     <section>
-      <h2 class="mb-4 text-2xl font-semibold">Progress Bars</h2>
+      <h2 class="mb-4 text-2xl font-semibold dark:text-white">Progress Bars</h2>
       <div class="space-y-4 max-w-xs">
         <template v-for="(_, variant) in progressVariants.variant">
-          {{ variant }}
+          <p class="mb-3 font-semibold capitalize dark:text-white">{{ variant }}</p>
           <Progress :value="Math.floor(Math.random() * (90 - 10 + 1)) + 10" :variant="variant" />
         </template>
       </div>
@@ -125,7 +124,7 @@ import { Text, textVariants } from '@/components/ui/text';
 
     <!-- Stats -->
     <section>
-      <h2 class="mb-4 text-2xl font-semibold">Stats</h2>
+      <h2 class="mb-4 text-2xl font-semibold dark:text-white">Stats</h2>
       <div class="space-y-6 max-w-xs">
         <Stat trend="up">
           <template #icon>📈</template>
@@ -144,13 +143,13 @@ import { Text, textVariants } from '@/components/ui/text';
 
     <!-- Text Variants -->
     <section>
-      <h2 class="mb-4 text-2xl font-semibold">Text Variants</h2>
+      <h2 class="mb-4 text-2xl font-semibold dark:text-white">Text Variants</h2>
       <div class="space-y-8">
         <div v-for="(_, variant) in textVariants.variant" :key="variant">
-          <h3 class="mb-3 font-semibold capitalize">{{ variant }} variant</h3>
+          <h3 class="mb-3 font-semibold capitalize dark:text-white">{{ variant }} variant</h3>
           <div class="flex flex-col flex-wrap gap-4">
             <template v-for="(_, size) in textVariants.size" :key="variant + '-' + size">
-              {{ variant }} | {{ size }}
+              <p class="mb-3 font-semibold capitalize dark:text-white">Size - {{ size }}</p>
               <Text :variant="variant" :size="size">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi nam ipsa error, architecto at
                 dolorum

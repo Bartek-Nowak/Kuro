@@ -8,7 +8,8 @@ import { Callout, calloutVariants } from '@/components/ui/callout';
 import { IconToggle } from '@/components/ui/icon-toggle';
 import { ProgressiveImage, progressiveImageVariants } from '@/components/ui/progressive-image';
 import { Progress, progressVariants } from '@/components/ui/progress';
-import { Stat } from '@/components/ui/stat';
+import { Rating, ratingVariants } from '@/components/ui/rating';
+import { Stat, statVariants } from '@/components/ui/stat';
 import { Switch, switchVariants } from '@/components/ui/switch';
 import { Text, textVariants } from '@/components/ui/text';
 
@@ -136,6 +137,17 @@ import { Text, textVariants } from '@/components/ui/text';
           <p class="mb-3 font-semibold capitalize dark:text-white">{{ variant }}</p>
           <Progress :value="Math.floor(Math.random() * (90 - 10 + 1)) + 10" :variant="variant" />
         </template>
+      </div>
+    </section>
+
+    <!-- Rating -->
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold dark:text-white">Rating</h2>
+      <div class="space-y-4 max-w-xs">
+        <div v-for="(_, variant) in ratingVariants.variant" class="flex flex-col gap-4 max-w-xs">
+          <p class="mb-3 font-semibold capitalize dark:text-white">{{ variant }}</p>
+          <Rating v-for="(_, size) in ratingVariants.size" :variant="variant" :size="size" />
+        </div>
       </div>
     </section>
 

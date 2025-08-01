@@ -6,6 +6,12 @@
     "requires": []
   },
   {
+    "name": "avatar",
+    "path": "avatar",
+    "description": "Displays a circular user profile image with optional initials placeholder.",
+    "requires": []
+  },
+  {
     "name": "badge",
     "path": "badge",
     "description": "Small, versatile UI element used to display statuses, counts, or labels with support for variants and sizes.",

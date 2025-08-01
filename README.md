@@ -34,6 +34,10 @@ The CLI will prompt you to confirm installation and specify your main CSS file p
 - Node.js v14 or higher
 - A Vue 3 project structure with Vite (for automatic `vite.config.js` update)
 
+## Documentation
+Full documentation is available at:
+[Kuro](https://mellifluous-squirrel-4409cd.netlify.app)
+
 ## Installation
 
 No installation required — just run via `npx` from GitHub.

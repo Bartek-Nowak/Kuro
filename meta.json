@@ -54,6 +54,12 @@
     "requires": []
   },
   {
+    "name": "rating",
+    "path": "rating",
+    "description": "Interactive star-based rating component supporting partial selection and read-only mode.",
+    "requires": ["lucide-vue-next"]
+  },
+  {
     "name": "stat",
     "path": "stat",
     "description": "Presents numerical metrics or KPIs in a compact visual block.",

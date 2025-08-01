@@ -31,6 +31,7 @@ export default defineConfig({
       {
         text: 'Components',
         items: [
+          { text: 'Avatar', link: '/components/avatar' },
           { text: 'Allert', link: '/components/allert' },
           { text: 'Badge', link: '/components/badge' },
           { text: 'Button', link: '/components/button' },

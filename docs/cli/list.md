@@ -10,13 +10,13 @@ npx github:Bartek-Nowak/Kuro list
 
 - Component name
 - Description
-- Dependencies (if any)
-
+- Dependencies (npm packages) if any
+- Requires (other components) if any
 
 ## 🧪 Example output:
 
 ```bash
-📦 Available components:
+🛠️ Available components:
 
 🔹 alert
    📝 Displays a prominent alert message with optional icon and title.
@@ -32,9 +32,16 @@ npx github:Bartek-Nowak/Kuro list
 
 🔹 text
    📝 Typography component supporting variants and semantic tags.
+
+🔹 rating
+   📝 Interactive star-based rating component supporting partial selection and read-only mode.
+   📦 Dependencies: lucide-vue-next
+   🤝 Requires: icon-toggle
 ```
 
 ## 🔧 Notes
 
 - This command does not modify any files — it only lists available components
+- Dependencies are npm packages required by the component.
+- Requires are other components that this component depends on.
 

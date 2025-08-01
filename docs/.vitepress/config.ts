@@ -40,6 +40,7 @@ export default defineConfig({
           { text: 'Icon Toggle', link: '/components/icon-toggle' },
           { text: 'Progress', link: '/components/progress' },
           { text: 'Progressive Image', link: '/components/progressive-image' },
+          { text: 'Rating', link: '/components/rating' },
           { text: 'Stat', link: '/components/stat' },
           { text: 'Switch', link: '/components/switch' },
           { text: 'Text', link: '/components/text' },

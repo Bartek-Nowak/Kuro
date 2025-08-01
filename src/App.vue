@@ -2,6 +2,7 @@
 import { Avatar, avatarVariants } from '@/components/ui/avatar';
 import { Alert, alertVariants } from '@/components/ui/alert';
 import { Badge, badgeVariants } from '@/components/ui/badge';
+import { Breadcrumb, breadcrumbVariants } from '@/components/ui/breadcrumb';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { Callout, calloutVariants } from '@/components/ui/callout';
 import { IconToggle } from '@/components/ui/icon-toggle';
@@ -51,6 +52,21 @@ import { Text, textVariants } from '@/components/ui/text';
         <template v-for="(_, variant) in badgeVariants.variant">
           <Badge v-for="(_, size) in badgeVariants.size" :size="size" :variant="variant">{{ variant + " " + size }}
           </Badge>
+        </template>
+      </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold dark:text-white">Breadcrumb</h2>
+      <div class="space-y-8">
+        <template v-for="(_, variant) in breadcrumbVariants.variant">
+          <Breadcrumb v-for="(_, size) in breadcrumbVariants.size"  :items="[
+            { label: 'Home', href: '/' },
+            { label: 'Library', href: '/library' },
+            { label: 'Data', disabled: true }
+          ]" :variant="variant" :size="size">
+          </Breadcrumb>
         </template>
       </div>
     </section>

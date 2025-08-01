@@ -79,7 +79,7 @@ const textVariants = ['default', 'primary', 'secondary', 'muted', 'destructive',
       </div>
     </div>
 
-    <IconToggle>
+    <IconToggle mode="click">
       🙂
       <template #alt>
       😡

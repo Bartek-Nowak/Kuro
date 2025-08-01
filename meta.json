@@ -42,6 +42,13 @@
     "requires": []
   },
   {
+    "name": "dialog",
+    "path": "dialog",
+    "description": "Highlights key content with an icon, title, and description.",
+    "dependencies": ["lucide-vue-next"],
+    "requires": ["button"]
+  },
+  {
     "name": "icon-toggle",
     "path": "icon-toggle",
     "description": "Toggles between two icons with animated transitions on hover",

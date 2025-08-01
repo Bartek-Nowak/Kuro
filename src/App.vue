@@ -1,179 +1,166 @@
 <script setup lang="ts">
-import { Avatar } from '@/components/ui/avatar';
-import { Alert } from '@/components/ui/alert';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Callout } from '@/components/ui/callout';
-import { ProgressiveImage } from '@/components/ui/progressive-image';
-import { Progress } from '@/components/ui/progress';
-import { Stat } from './components/ui/stat';
-import { Text } from '@/components/ui/text';
-import { IconToggle } from '@/components/ui/icon-toggle'
+import { Avatar, avatarVariants } from '@/components/ui/avatar';
+import { Alert, alertVariants } from '@/components/ui/alert';
+import { Badge, badgeVariants } from '@/components/ui/badge';
+import { Button, buttonVariants } from '@/components/ui/button';
+import { Callout, calloutVariants } from '@/components/ui/callout';
+import { IconToggle } from '@/components/ui/icon-toggle';
+import { ProgressiveImage, progressiveImageVariants } from '@/components/ui/progressive-image';
+import { Progress, progressVariants } from '@/components/ui/progress';
+import { Stat } from '@/components/ui/stat';
+import { Text, textVariants } from '@/components/ui/text';
 
-const alertVariants = ['default', 'destructive', 'success', 'warning'] as const;
-const buttonVariants = ['default', 'destructive', 'outline', 'ghost', 'link'] as const;
-const sizes = ['sm', 'md', 'lg'] as const;
-const textVariants = ['default', 'primary', 'secondary', 'muted', 'destructive', 'success', 'warning', 'info'] as const;
 </script>
 
 <template>
-  <div class="p-4 space-y-16">
+  <div class="p-6 max-w-7xl mx-auto space-y-20">
 
-    <div class="space-x-4 flex items-center">
-      <Avatar src="https://randomuser.me/api/portraits/women/44.jpg" alt="User photo" />
-
-      <Avatar initials="BN" size="sm" />
-
-      <Avatar initials="JS" size="lg" />
-
-      <Avatar size="md" />
-    </div>
+    <!-- Avatars -->
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold">Avatars</h2>
+      <div class="flex items-center gap-4">
+        <Avatar src="https://randomuser.me/api/portraits/women/44.jpg" alt="User photo" />
+        <Avatar />
+        <template v-for="(_, variant) in avatarVariants.variant">
+          <Avatar v-for="(_, size) in avatarVariants.size" :size="size" :variant="variant"
+            :initials="variant[0] + size[0]" />
+        </template>
+      </div>
+    </section>
 
     <!-- Alerts -->
-    <div class="space-y-6">
-      <div v-for="variant in alertVariants" :key="variant" class="space-y-4">
-        <h3 class="font-semibold capitalize">{{ variant }} variant</h3>
-        <div class="flex flex-wrap gap-4">
-          <Alert v-for="size in sizes" :key="variant + '-' + size" :variant="variant" :size="size">
-            <template #title>
-              {{ variant }} alert
-            </template>
-            <template #description>
-              This is a {{ variant }} alert with size {{ size }}.
-            </template>
-          </Alert>
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold">Alerts</h2>
+      <div class="space-y-8">
+        <div v-for="(_, variant) in alertVariants.variant" :key="variant">
+          <h3 class="mb-3 font-semibold capitalize">{{ variant }} variant</h3>
+          <div class="flex flex-wrap gap-4">
+            <Alert v-for="(_, size) in alertVariants.size" :key="variant + '-' + size" :variant="variant" :size="size">
+              <template #title>{{ variant }} alert</template>
+              <template #description>This is a {{ variant }} alert with size {{ size }}.</template>
+            </Alert>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="space-y-4">
-      <div>
-        <h3 class="mb-2 font-semibold">Variants</h3>
-        <Badge variant="default">Default</Badge>
-        <Badge variant="success" class="ml-2">Success</Badge>
-        <Badge variant="warning" class="ml-2">Warning</Badge>
-        <Badge variant="error" class="ml-2">Error</Badge>
-        <Badge variant="info" class="ml-2">Info</Badge>
+    <!-- Badges -->
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold">Badges</h2>
+      <div class="flex flex-wrap items-center gap-4">
+        <template v-for="(_, variant) in badgeVariants.variant">
+          <Badge v-for="(_, size) in badgeVariants.size" :size="size" :variant="variant">{{ variant + " " + size }}
+          </Badge>
+        </template>
       </div>
-
-      <div>
-        <h3 class="mb-2 font-semibold">Sizes</h3>
-        <Badge size="sm" variant="info">Small</Badge>
-        <Badge size="md" variant="info" class="ml-2">Medium</Badge>
-        <Badge size="lg" variant="info" class="ml-2">Large</Badge>
-      </div>
-    </div>
-
-    <!-- Callout -->
-    <div class="mt-10 space-y-6">
-      <h3 class="text-lg font-semibold">Callout variants</h3>
-      <div class="space-y-4">
-        <Callout variant="info">
-          <template #icon>
-            <span>ℹ️</span>
-          </template>
-          <template #title>
-            Info callout
-          </template>
-          This is an informative message for the user.
-        </Callout>
-
-        <Callout variant="success">
-          <template #icon>
-            <span>✅</span>
-          </template>
-          <template #title>
-            Success callout
-          </template>
-          Everything went smoothly.
-        </Callout>
-
-        <Callout variant="warning">
-          <template #icon>
-            <span>⚠️</span>
-          </template>
-          <template #title>
-            Warning callout
-          </template>
-          Something may require your attention.
-        </Callout>
-
-        <Callout variant="danger">
-          <template #icon>
-            <span>🛑</span>
-          </template>
-          <template #title>
-            Danger callout
-          </template>
-          There was a problem processing your request.
-        </Callout>
-      </div>
-    </div>
-
-    <IconToggle mode="click">
-      🙂
-      <template #alt>
-        😡
-      </template>
-    </IconToggle>
-
-    <ProgressiveImage :width="256" :height="256" variant="bounce" src="x" alt="Random landscape" />
-    <ProgressiveImage :width="256" :height="256" variant="flash" src="x" alt="Random landscape" />
-    <ProgressiveImage :width="256" :height="256" variant="ping" src="x" alt="Random landscape" />
-    <ProgressiveImage :width="256" :height="256" variant="shimmer_simple" src="x" alt="Random landscape" />
-    <ProgressiveImage :width="256" :height="256" variant="spin" src="x" alt="Random landscape" />
-    <ProgressiveImage :width="256" :height="256" src="x" alt="Random landscape" />
+    </section>
 
     <!-- Buttons -->
-    <div class="space-y-6 mt-10">
-      <div v-for="variant in buttonVariants" :key="variant" class="space-y-4">
-        <h3 class="font-semibold capitalize">{{ variant }} variant</h3>
-        <div class="flex flex-wrap gap-4">
-          <Button v-for="size in sizes" :key="variant + '-' + size" :variant="variant" :size="size">
-            {{ variant }} - {{ size }}
-          </Button>
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold">Buttons</h2>
+      <div class="space-y-8">
+        <div v-for="(_, variant) in buttonVariants.variant" :key="variant">
+          <h3 class="mb-3 font-semibold capitalize">{{ variant }} variant</h3>
+          <div class="flex flex-wrap gap-4">
+            <Button v-for="(_, size) in buttonVariants.size" :key="variant + '-' + size" :variant="variant"
+              :size="size">
+              {{ variant }} - {{ size }}
+            </Button>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Progress -->
-    <div class="space-y-6 mt-10">
-      <Progress :value="45" variant="determinate" />
-      <Progress :value="25" variant="success" />
-      <Progress :value="35" variant="warning" />
-      <Progress :value="25" variant="error" />
-      <Progress :value="85" variant="accent" />
-      <Progress :value="95" variant="muted" />
-    </div>
+    <!-- Callouts -->
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold">Callouts</h2>
+      <div class="space-y-6 max-w-xl">
 
-    <!-- Stat -->
-    <div>
-      <Stat trend="up">
-        <template #icon>📈</template>
-        <template #label>Revenue</template>
-        <template #value>$12,345</template>
-        <template #trendValue>+5%</template>
-      </Stat>
-      <Stat trend="down" class="mt-6">
-        <template #icon>📉</template>
-        <template #label>Revenue</template>
-        <template #value>$12,345</template>
-        <template #trendValue>-5%</template>
-      </Stat>
-    </div>
+        <Callout v-for="(_, variant) in calloutVariants.variant" :variant="variant">
+          <template #icon>ℹ️</template>
+          <template #title>{{ variant }}</template>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, fugit.
+        </Callout>
+      </div>
+    </section>
 
-    <!-- Text -->
-    <!-- Alerts -->
-    <div class="space-y-6">
-      <div v-for="variant in textVariants" :key="variant" class="space-y-4">
-        <h3 class="font-semibold capitalize">{{ variant }} variant</h3>
-        <div class="flex flex-wrap gap-4">
-          <Text v-for="size in sizes" :key="variant + '-' + size" :variant="variant" :size="size">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi nam ipsa error, architecto at dolorum
-            consequatur distinctio velit labore ratione? Omnis dicta ad ipsum quis, molestias earum natus eius in.
-          </Text>
+    <!-- Icon Toggle -->
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold">Icon Toggle</h2>
+      <div class="flex flex-col flex-wrap gap-4">
+        <p>click</p>
+        <IconToggle mode="click">
+          🙂
+          <template #alt>😡</template>
+        </IconToggle>
+        <p>hover</p>
+        <IconToggle mode="hover">
+          🙂
+          <template #alt>😡</template>
+        </IconToggle>
+      </div>
+    </section>
+
+    <!-- Progressive Images -->
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold">Progressive Images</h2>
+      <div class="flex flex-wrap gap-6">
+        <div v-for="(_, variant) in progressiveImageVariants.variant">
+          {{ variant }}
+          <ProgressiveImage :width="256" :height="256" :variant="variant" src="x" alt="Random landscape" />
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Progress Bars -->
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold">Progress Bars</h2>
+      <div class="space-y-4 max-w-xs">
+        <template v-for="(_, variant) in progressVariants.variant">
+          {{ variant }}
+          <Progress :value="Math.floor(Math.random() * (90 - 10 + 1)) + 10" :variant="variant" />
+        </template>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold">Stats</h2>
+      <div class="space-y-6 max-w-xs">
+        <Stat trend="up">
+          <template #icon>📈</template>
+          <template #label>Revenue</template>
+          <template #value>$12,345</template>
+          <template #trendValue>+5%</template>
+        </Stat>
+        <Stat trend="down">
+          <template #icon>📉</template>
+          <template #label>Revenue</template>
+          <template #value>$12,345</template>
+          <template #trendValue>-5%</template>
+        </Stat>
+      </div>
+    </section>
+
+    <!-- Text Variants -->
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold">Text Variants</h2>
+      <div class="space-y-8">
+        <div v-for="(_, variant) in textVariants.variant" :key="variant">
+          <h3 class="mb-3 font-semibold capitalize">{{ variant }} variant</h3>
+          <div class="flex flex-col flex-wrap gap-4">
+            <template v-for="(_, size) in textVariants.size" :key="variant + '-' + size">
+              {{ variant }} | {{ size }}
+              <Text :variant="variant" :size="size">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi nam ipsa error, architecto at
+                dolorum
+                consequatur distinctio velit labore ratione.
+              </Text>
+            </template>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 </template>

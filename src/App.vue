@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Avatar } from '@/components/ui/avatar';
 import { Alert } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -17,6 +18,17 @@ const textVariants = ['default', 'primary', 'secondary', 'muted', 'destructive',
 
 <template>
   <div class="p-4 space-y-16">
+
+    <div class="space-x-4 flex items-center">
+      <Avatar src="https://randomuser.me/api/portraits/women/44.jpg" alt="User photo" />
+
+      <Avatar initials="BN" size="sm" />
+
+      <Avatar initials="JS" size="lg" />
+
+      <Avatar size="md" />
+    </div>
+
     <!-- Alerts -->
     <div class="space-y-6">
       <div v-for="variant in alertVariants" :key="variant" class="space-y-4">
@@ -34,23 +46,23 @@ const textVariants = ['default', 'primary', 'secondary', 'muted', 'destructive',
       </div>
     </div>
 
-     <div class="space-y-4">
-    <div>
-      <h3 class="mb-2 font-semibold">Variants</h3>
-      <Badge variant="default">Default</Badge>
-      <Badge variant="success" class="ml-2">Success</Badge>
-      <Badge variant="warning" class="ml-2">Warning</Badge>
-      <Badge variant="error" class="ml-2">Error</Badge>
-      <Badge variant="info" class="ml-2">Info</Badge>
-    </div>
+    <div class="space-y-4">
+      <div>
+        <h3 class="mb-2 font-semibold">Variants</h3>
+        <Badge variant="default">Default</Badge>
+        <Badge variant="success" class="ml-2">Success</Badge>
+        <Badge variant="warning" class="ml-2">Warning</Badge>
+        <Badge variant="error" class="ml-2">Error</Badge>
+        <Badge variant="info" class="ml-2">Info</Badge>
+      </div>
 
-    <div>
-      <h3 class="mb-2 font-semibold">Sizes</h3>
-      <Badge size="sm" variant="info">Small</Badge>
-      <Badge size="md" variant="info" class="ml-2">Medium</Badge>
-      <Badge size="lg" variant="info" class="ml-2">Large</Badge>
+      <div>
+        <h3 class="mb-2 font-semibold">Sizes</h3>
+        <Badge size="sm" variant="info">Small</Badge>
+        <Badge size="md" variant="info" class="ml-2">Medium</Badge>
+        <Badge size="lg" variant="info" class="ml-2">Large</Badge>
+      </div>
     </div>
-  </div>
 
     <!-- Callout -->
     <div class="mt-10 space-y-6">
@@ -101,7 +113,7 @@ const textVariants = ['default', 'primary', 'secondary', 'muted', 'destructive',
     <IconToggle mode="click">
       🙂
       <template #alt>
-      😡
+        😡
       </template>
     </IconToggle>
 

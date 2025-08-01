@@ -2,7 +2,7 @@
 
 ```vue
 <script setup lang="ts">
-import {Stat} from '@/components/ui/stat';
+import {Stat} from '@/components/kuro/stat';
 </script>
 
 <template>

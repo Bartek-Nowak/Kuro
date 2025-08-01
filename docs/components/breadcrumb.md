@@ -4,7 +4,7 @@ Navigation component that displays the current page’s location within a site h
 
 ```vue
 <script setup lang="ts">
-import {Breadcrumb} from '@/components/ui/breadcrumb';
+import {Breadcrumb} from '@/components//kuro/breadcrumb';
 </script>
 <template>
   <Breadcrumb
@@ -78,7 +78,7 @@ interface BreadcrumbItem {
 
 ```vue
 <script setup lang="ts">
-import {Breadcrumb} from '@/components/ui/breadcrumb';
+import {Breadcrumb} from '@/components/kuro/breadcrumb';
 </script>
 
 <template>

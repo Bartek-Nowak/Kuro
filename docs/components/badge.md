@@ -4,7 +4,7 @@ The **Badge** component is used to highlight small pieces of information, such a
 
 ```vue
 <script setup lang="ts">
-import { Badge } from '@/components/ui/badge';
+import { Badge } from '@/components/kuro/badge';
 </script>
 
 <template>

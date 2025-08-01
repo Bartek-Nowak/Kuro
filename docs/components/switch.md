@@ -4,7 +4,7 @@ A toggle component for enabling or disabling a setting.
 
 ```vue
 <script setup lang="ts">
-import {Switch} from '@/components/ui/switch';
+import {Switch} from '@/components/kuro/switch';
 </script>
 
 <template>

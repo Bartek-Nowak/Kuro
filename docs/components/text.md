@@ -2,7 +2,7 @@
 
 ```vue
 <script setup lang="ts">
-import {Text} from '@/components/ui/text';
+import {Text} from '@/components/kuro/text';
 </script>
 
 <template>

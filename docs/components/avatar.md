@@ -4,7 +4,7 @@ A circular profile image component with optional placeholder initials.
 
 ```vue
 <script setup lang="ts">
-import {Avatar} from '@/components/ui/avatar';
+import {Avatar} from '@/components/kuro/avatar';
 </script>
 
 <template>

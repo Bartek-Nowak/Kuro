@@ -4,7 +4,7 @@ Toggles between two icons using smooth transitions. Useful for actions like "lik
 
 ```vue
 <script setup lang="ts">
-import { IconToggle } from '@/components/ui/icon-toggle';
+import { IconToggle } from '@/components/kuro/icon-toggle';
 import { Eye, EyeOff } from 'lucide-vue-next'
 </script>
 

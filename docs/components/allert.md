@@ -2,7 +2,7 @@
 
 ```vue
 <script setup lang="ts">
-import { Alert } from '@/components/ui/alert';
+import { Alert } from '@/components/kuro/alert';
 </script>
 
 <template>

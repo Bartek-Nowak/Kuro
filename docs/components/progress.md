@@ -3,7 +3,7 @@
 ```vue
 <script setup lang="ts">
 import { ref } from 'vue'
-import Progress from './Progress.vue'
+import { Progress } from '@/components/kuro/progress';
 
 const progressValue = ref(45)
 </script>
@@ -50,7 +50,7 @@ The Progress component supports several visual variants. Use the `variant` prop 
 ```vue
 <script setup lang="ts">
 import { ref } from 'vue'
-import Progress from './Progress.vue'
+import { Progress } from '@/components/kuro/progress';
 
 const progressValue = ref(45)
 </script>

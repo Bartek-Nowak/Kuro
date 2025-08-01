@@ -2,7 +2,7 @@
 
 ```vue
 <script setup lang="ts">
-import { Callout } from '@/components/ui/callout';
+import { Callout } from '@/components/kuro/callout';
 </script>
 
 <template>

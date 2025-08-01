@@ -13,7 +13,7 @@ The **Progressive Image** component displays an image with a loading animation p
 </template>
 
 <script setup lang="ts">
-import { ProgressiveImage } from '@/components/ui/progressive-image';
+import { ProgressiveImage } from '@/components/kuro/progressive-image';
 </script>
 ```
 ## Installation
@@ -67,6 +67,6 @@ npx github:Bartek-Nowak/Kuro add progressive-image.md
 </template>
 
 <script setup lang="ts">
-import { ProgressiveImage } from '@/components/ui/progressive-image';
+import { ProgressiveImage } from '@/components/kuro/progressive-image';
 </script>
 ```

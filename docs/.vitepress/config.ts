@@ -55,6 +55,7 @@ export default defineConfig({
           { text: 'useCopyToClipboard', link: '/composables/useCopyToClipboard' },
           { text: 'useEventListener', link: '/composables/useEventListener' },
           { text: 'useFocusTrap', link: '/composables/useFocusTrap' },
+          { text: 'useIdle', link: '/composables/useIdle' },
         ],
       },
     ],

@@ -4,47 +4,59 @@ import { copyFolderRecursiveSync } from './copyFolderRecursiveSync.js';
 import { execa } from 'execa';
 import prompts from 'prompts';
 
-export const add = async (name, componentsDir, dirname) => {
+const recursiveTypes = ['component'];
+
+const typeToSourceDirMap = {
+  component: (name) => `src/components/ui/${name}`,
+  composable: (name) => `src/composables/${name}.ts`,
+};
+
+const typeToDestDirMap = {
+  component: (name) => `src/components/kuro/${name}`,
+  composable: (name) => `src/composables/kuro/${name}.ts`,
+};
+
+export const add = async (name, _componentsDir, dirname) => {
   if (!name) {
-    console.error('❌ No component name provided');
+    console.error('❌ No item name provided');
     process.exit(1);
   }
 
   const metaPath = path.resolve(dirname, '../meta.json');
   const meta = JSON.parse(fs.readFileSync(metaPath, 'utf-8'));
-  const folderName = name.toLowerCase();
 
-  const componentMeta = meta.find((c) => c.name === folderName);
-  if (!componentMeta) {
-    console.error(`❌ Component metadata not found for: ${folderName}`);
+  const itemMeta = meta.find(
+    (c) => c.name.toLowerCase() === name.toLowerCase()
+  );
+
+  if (!itemMeta) {
+    console.error(`❌ Item metadata not found for: ${name}`);
     process.exit(1);
   }
 
-  const sourceDir = path.join(componentsDir, folderName);
-  const destDir = path.join(process.cwd(), 'src', 'components', 'kuro', folderName);
+  const sourcePath = path.resolve(typeToSourceDirMap[itemMeta.type](name));
+  const destPath = path.resolve(typeToDestDirMap[itemMeta.type](name));
+  const destDir = itemMeta.type === 'component'
+    ? path.dirname(destPath)
+    : path.dirname(destPath);
 
-  if (!fs.existsSync(sourceDir)) {
-    console.error(`❌ Component folder not found: ${folderName}`);
-    process.exit(1);
-  }
-
-  if (componentMeta.requires && componentMeta.requires.length > 0) {
-    for (const requiredComponent of componentMeta.requires) {
-      const requiredDestDir = path.join(process.cwd(), 'src', 'components', 'kuro', requiredComponent);
-      if (!fs.existsSync(requiredDestDir)) {
-        console.log(`ℹ️  Adding required component "${requiredComponent}" for "${folderName}"`);
-        await add(requiredComponent, componentsDir, dirname);
+  if (itemMeta.requires?.length) {
+    for (const required of itemMeta.requires) {
+      const requiredDest = path.resolve('src/components/kuro', required);
+      if (!fs.existsSync(requiredDest)) {
+        console.log(`ℹ️  Adding required component "${required}" for "${name}"`);
+        await add(required, _componentsDir, dirname);
       } else {
-        console.log(`ℹ️  Required component "${requiredComponent}" already exists. Skipping install.`);
+        console.log(`ℹ️  Required component "${required}" already exists. Skipping.`);
       }
     }
   }
 
-  if (fs.existsSync(destDir)) {
+  if (fs.existsSync(destPath)) {
     const { overwrite } = await prompts({
       type: 'confirm',
       name: 'overwrite',
-      message: `⚠️ Component "${folderName}" already exists. Overwrite and lose all local changes?`,
+      message: `⚠️ "${name}" already exists. Overwrite and lose all local changes?`,
       initial: false,
     });
 
@@ -53,25 +65,27 @@ export const add = async (name, componentsDir, dirname) => {
       process.exit(0);
     }
 
-    fs.rmSync(destDir, { recursive: true, force: true });
+    fs.rmSync(destPath, { recursive: true, force: true });
   }
 
-  if (componentMeta.dependencies && componentMeta.dependencies.length > 0) {
-    console.log(
-      `ℹ️ Installing dependencies for ${folderName}: ${componentMeta.dependencies.join(', ')}`
-    );
+  if (itemMeta.dependencies?.length) {
+    console.log(`ℹ️ Installing dependencies for ${name}: ${itemMeta.dependencies.join(', ')}`);
     try {
-      await execa('npm', ['install', ...componentMeta.dependencies], {
-        stdio: 'inherit',
-      });
-      console.log(`✅ Dependencies installed for ${folderName}`);
+      await execa('npm', ['install', ...itemMeta.dependencies], { stdio: 'inherit' });
+      console.log(`✅ Dependencies installed for ${name}`);
     } catch {
-      console.error(`❌ Failed to install dependencies for ${folderName}`);
+      console.error(`❌ Failed to install dependencies for ${name}`);
       process.exit(1);
     }
   }
 
-  fs.mkdirSync(destDir, { recursive: true });
-  copyFolderRecursiveSync(sourceDir, destDir);
-  console.log(`✅ Copied ${folderName} folder to ${destDir}`);
+  if (recursiveTypes.includes(itemMeta.type)) {
+    fs.mkdirSync(destPath, { recursive: true });
+    copyFolderRecursiveSync(sourcePath, destPath);
+    console.log(`✅ Copied ${name} folder to ${destPath}`);
+  } else {
+    fs.mkdirSync(destDir, { recursive: true });
+    fs.copyFileSync(sourcePath, destPath);
+    console.log(`✅ Copied "${name}" file to ${destPath}`);
+  }
 };

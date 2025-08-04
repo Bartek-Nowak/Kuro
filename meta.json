@@ -4,63 +4,72 @@
     "path": "alert",
     "description": "Displays a prominent alert message with optional icon and title.",
     "dependencies": [],
-    "requires": []
+    "requires": [],
+    "type": "component"
   },
   {
     "name": "avatar",
     "path": "avatar",
     "description": "Displays a circular user profile image with optional initials placeholder.",
     "dependencies": [],
-    "requires": []
+    "requires": [],
+    "type": "component"
   },
   {
     "name": "badge",
     "path": "badge",
     "description": "Small, versatile UI element used to display statuses, counts, or labels with support for variants and sizes.",
     "dependencies": [],
-    "requires": []
+    "requires": [],
+    "type": "component"
   },
   {
     "name": "breadcrumb",
     "path": "breadcrumb",
     "description": "Navigation component that displays the current page’s location within a site hierarchy, with support for variants and sizes.",
     "dependencies": [],
-    "requires": []
+    "requires": [],
+    "type": "component"
   },
   {
     "name": "button",
     "path": "button",
     "description": "Versatile button component with support for variants and sizes.",
     "dependencies": [],
-    "requires": []
+    "requires": [],
+    "type": "component"
   },
   {
     "name": "callout",
     "path": "callout",
     "description": "Highlights key content with an icon, title, and description.",
     "dependencies": [],
-    "requires": []
+    "requires": [],
+    "type": "component"
   },
   {
     "name": "dialog",
     "path": "dialog",
     "description": "Highlights key content with an icon, title, and description.",
     "dependencies": ["lucide-vue-next"],
-    "requires": ["button"]
+    "requires": ["button"],
+    "type": "component"
   },
   {
     "name": "icon-toggle",
     "path": "icon-toggle",
     "description": "Toggles between two icons with animated transitions on hover",
     "dependencies": [],
-    "requires": []
+    "requires": [],
+    "type": "component"
   },
   {
     "name": "progress",
     "path": "progress",
     "description": "Displays the current status of a process in a visual bar format. Useful for loading, uploading, or indicating task completion.",
     "dependencies": [],
-    "requires": []
+    "requires": [],
+    "type": "component"
   },
   {
     "name": "progressive-image",
@@ -74,34 +83,39 @@
     "path": "rating",
     "description": "Interactive star-based rating component supporting partial selection and read-only mode.",
     "dependencies": ["lucide-vue-next"],
-    "requires": []
+    "requires": [],
+    "type": "component"
   },
   {
     "name": "stat",
     "path": "stat",
     "description": "Presents numerical metrics or KPIs in a compact visual block.",
     "dependencies": [],
-    "requires": []
+    "requires": [],
+    "type": "component"
   },
   {
     "name": "switch",
     "path": "switch",
     "description": "Interactive toggle component for switching between enabled and disabled states, commonly used in settings interfaces.",
     "dependencies": [],
-    "requires": []
+    "requires": [],
+    "type": "component"
   },
   {
     "name": "text",
     "path": "text",
     "description": "Typography component supporting variants and semantic tags.",
     "dependencies": [],
-    "requires": []
+    "requires": [],
+    "type": "component"
   },
   {
     "name": "toast",
     "path": "toast",
     "description": "Small, temporary notifications appearing at the top or bottom of the screen.",
     "dependencies": [],
-    "requires": ["button", "text"]
+    "requires": ["button", "text"],
+    "type": "component"
   }
 ]

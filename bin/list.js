@@ -1,8 +1,8 @@
-// bin/list.js
 import fs from 'fs';
 import path from 'path';
+import prompts from 'prompts';
 
-export const list = (dirname) => {
+export const list = async (dirname) => {
   const metaPath = path.resolve(dirname, '../meta.json');
 
   if (!fs.existsSync(metaPath)) {
@@ -12,18 +12,54 @@ export const list = (dirname) => {
 
   const meta = JSON.parse(fs.readFileSync(metaPath, 'utf-8'));
 
-  console.log('\n🛠️  Available components:\n');
+  const showAll = process.argv.includes('--all');
 
-  for (const comp of meta) {
-    console.log(`🔹 ${comp.name}`);
-    if (comp.description) {
-      console.log(`   📝 ${comp.description}`);
+  let filtered;
+
+  if (showAll) {
+    filtered = meta;
+  } else {
+    const categories = [
+      { title: 'Components', value: 'component' },
+      { title: 'Composables', value: 'composable' },
+      { title: 'Utils', value: 'util' },
+    ];
+
+    const response = await prompts({
+      type: 'multiselect',
+      name: 'selectedCategories',
+      message: 'Select categories to list',
+      choices: categories,
+      min: 1,
+    });
+
+    if (!response.selectedCategories || response.selectedCategories.length === 0) {
+      console.log('⚠️ You must select at least one category.');
+      return;
     }
-    if (comp.dependencies?.length) {
-      console.log(`   📦 Dependencies: ${comp.dependencies.join(', ')}`);
+
+    filtered = meta.filter(item =>
+      response.selectedCategories.includes(item.type)
+    );
+  }
+
+  if (filtered.length === 0) {
+    console.log('⚠️ No items found for the selected categories.');
+    return;
+  }
+
+  console.log('\n🛠️ Available items:\n');
+
+  for (const item of filtered) {
+    console.log(`🔹 ${item.name} (${item.type})`);
+    if (item.description) {
+      console.log(`   📝 ${item.description}`);
     }
-    if (comp.requires?.length) {
-      console.log(`   🤝 Requires: ${comp.requires.join(', ')}`);
+    if (item.dependencies?.length) {
+      console.log(`   📦 Dependencies: ${item.dependencies.join(', ')}`);
+    }
+    if (item.requires?.length) {
+      console.log(`   🤝 Requires: ${item.requires.join(', ')}`);
     }
     console.log('');
   }

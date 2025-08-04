@@ -3,8 +3,7 @@ import {getClasses} from '@/utils/kuro/getClasses';
 export const avatarVariants = {
   base: 'inline-flex items-center justify-center rounded-full font-semibold select-none overflow-hidden',
   variant: {
-    default:
-      'bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100',
+    default: 'bg-muted text-muted-foreground',
     success:
       'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100',
     warning:
@@ -20,6 +19,7 @@ export const avatarVariants = {
     lg: 'w-16 h-16 text-lg',
   },
 };
+
 
 
 export type AvatarVariants = {

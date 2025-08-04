@@ -1,10 +1,9 @@
 import { getClasses } from '@/utils/kuro/getClasses';
 
 export const calloutVariants = {
-  base: 'flex gap-2 p-2',
+  base: 'flex gap-2 p-2 border rounded-md',
   variant: {
-    default:
-      'border-border bg-muted text-foreground dark:bg-neutral-800 dark:text-neutral-100',
+    default: 'bg-background text-foreground',
     info:
       'border-blue-400 bg-blue-50 text-blue-900 dark:border-blue-600 dark:bg-blue-950 dark:text-blue-100',
     success:

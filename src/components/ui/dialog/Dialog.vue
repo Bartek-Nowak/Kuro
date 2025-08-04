@@ -37,7 +37,7 @@ watch(isOpen, () => {
   <teleport to="body">
     <transition name="fade">
       <div v-if="isOpen" :class="getDialogClasses({ variant: variant, size: size }, props.class)">
-        <div class="w-3xl bg-green-500 space-y-2">
+        <div class="w-3xl space-y-2">
           <Button size="sm" variant="ghost" class="absolute top-3 right-3" aria-label="Close dialog"
             @click="isOpen = false">
             <X class="size-3.5" />

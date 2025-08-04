@@ -1,9 +1,9 @@
 import {getClasses} from '@/utils/kuro/getClasses';
 
 export const dialogVariants = {
-  base: 'fixed inset-0 z-50 grid place-items-center bg-black/60 backdrop-blur-sm *:w-full  *:rounded-2xl *:shadow-xl *:relative *:p-6',
+  base: 'fixed inset-0 z-50 grid place-items-center bg-foreground/60 backdrop-blur-sm *:w-full *:rounded- md *:shadow-xl *:relative *:p-6',
   variant: {
-    default: '*:bg-gray-500 *:text-white *',
+    default: '',
     primary: '*:bg-blue-600 *:text-white',
     secondary: '*:bg-gray-700 *:text-white',
     muted: '*:bg-gray-300 *:text-gray-800',

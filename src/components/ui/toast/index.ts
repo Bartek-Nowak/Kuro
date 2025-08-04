@@ -4,7 +4,7 @@ import {getClasses} from '@/utils/kuro/getClasses';
 export const toastVariants = {
   base: 'rounded-md max-w-sm shadow-md font-semibold select-none my-2 relative',
   variant: {
-    default: 'bg-gray-800 text-gray-100',
+    default: 'bg-gray-800 text-foreground',
     success: 'bg-green-600 text-white',
     error: 'bg-red-600 text-white',
     warning: 'bg-yellow-500 text-black',

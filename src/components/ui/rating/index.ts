@@ -3,8 +3,8 @@ import {getClasses} from '@/utils/kuro/getClasses';
 export const ratingVariants = {
   base: 'focus:outline-none focus-visible:ring-2 *:transition-colors',
   variant: {
-    default: '*:fill-yellow-400 *:stroke-yellow-500',
-    primary: '*:fill-blue-600 *:stroke-blue-400',
+    default: '*:fill-primary *:stroke-foreground',
+    primary: '*:fill-yellow-400 *:stroke-yellow-500',
     secondary: '*:fill-gray-700 *:stroke-gray-300',
     muted: '*:fill-gray-300 *:stroke-gray-600',
     destructive: '*:fill-red-600 *:stroke-red-400',

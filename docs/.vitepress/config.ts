@@ -48,6 +48,12 @@ export default defineConfig({
           { text: 'Toast', link: '/components/toast' },
         ],
       },
+      {
+        text: 'Composables',
+        items: [
+          { text: 'useAsyncState', link: '/composables/useAsyncState' },
+        ],
+      },
     ],
 
     socialLinks: [{icon: 'github', link: 'https://github.com/Bartek-Nowak/Kuro'}],

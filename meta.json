@@ -117,5 +117,85 @@
     "dependencies": [],
     "requires": ["button", "text"],
     "type": "component"
+  },
+  {
+    "name": "useAsyncState",
+    "path": "useAsyncState",
+    "description": "Composable for managing async operations with reactive state including loading, error, and data handling.",
+    "dependencies": [],
+    "requires": [],
+    "type": "composable"
+  },
+  {
+    "name": "useCopyToClipboard",
+    "path": "useCopyToClipboard",
+    "description": "Composable to copy text to the clipboard using the Clipboard API, with reactive status and error handling.",
+    "dependencies": [],
+    "requires": [],
+    "type": "composable"
+  },
+  {
+    "name": "useEventListener",
+    "path": "useEventListener",
+    "description": "Composable to add and automatically clean up an event listener on a given target or reactive target function.",
+    "dependencies": [],
+    "requires": [],
+    "type": "composable"
+  },
+  {
+    "name": "useFocusTrap",
+    "path": "useFocusTrap",
+    "description": "Composable that traps keyboard focus within a specified container element, ensuring accessible keyboard navigation (focus trapping).",
+    "dependencies": [],
+    "requires": [],
+    "type": "composable"
+  },
+  {
+    "name": "useIdle",
+    "path": "useIdle",
+    "description": "Tracks user inactivity by listening to common interaction events and sets a reactive flag when the user is idle after a specified timeout.",
+    "dependencies": [],
+    "requires": [],
+    "type": "composable"
+  },
+  {
+    "name": "useIntersectionObserver",
+    "path": "useIntersectionObserver",
+    "description": "A composable that uses the Intersection Observer API to track if a DOM element is currently visible within the viewport or a specified root.",
+    "dependencies": [],
+    "requires": [],
+    "type": "composable"
+  },
+  {
+    "name": "usePageVisibility",
+    "path": "usePageVisibility",
+    "description": "Composable that tracks the visibility state of the page (whether the page is currently visible or hidden). Useful for pausing activity when the user switches tabs or minimizes the window.",
+    "dependencies": [],
+    "requires": [],
+    "type": "composable"
+  },
+  {
+    "name": "useScrollDirection",
+    "path": "useScrollDirection",
+    "description": "Composable that detects the current scroll direction of the window, returning 'up', 'down', or null if no movement.",
+    "dependencies": [],
+    "requires": [],
+    "type": "composable"
+  },
+  {
+    "name": "useThrottleFn",
+    "path": "useThrottleFn",
+    "description": "Composable to create a throttled version of a function, limiting how often it can be invoked within a specified delay.",
+    "dependencies": [],
+    "requires": [],
+    "type": "composable"
+  },
+  {
+    "name": "useWindowSize",
+    "path": "useWindowSize",
+    "description": "Composable that tracks the current window width and height, updating reactively on resize events.",
+    "dependencies": [],
+    "requires": [],
+    "type": "composable"
   }
 ]

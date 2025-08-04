@@ -52,6 +52,7 @@ export default defineConfig({
         text: 'Composables',
         items: [
           { text: 'useAsyncState', link: '/composables/useAsyncState' },
+          { text: 'useCopyToClipboard', link: '/composables/useCopyToClipboard' },
         ],
       },
     ],

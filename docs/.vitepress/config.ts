@@ -56,6 +56,7 @@ export default defineConfig({
           { text: 'useEventListener', link: '/composables/useEventListener' },
           { text: 'useFocusTrap', link: '/composables/useFocusTrap' },
           { text: 'useIdle', link: '/composables/useIdle' },
+          { text: 'useIntersectionObserver', link: '/composables/useIntersectionObserver' },
         ],
       },
     ],

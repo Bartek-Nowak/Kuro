@@ -60,6 +60,7 @@ export default defineConfig({
           { text: 'usePageVisibility', link: '/composables/usePageVisibility' },
           { text: 'useScrollDirection', link: '/composables/useScrollDirection' },
           { text: 'useThrottleFn', link: '/composables/useThrottleFn' },
+          { text: 'useWindowSize', link: '/composables/useWindowSize' },
         ],
       },
     ],

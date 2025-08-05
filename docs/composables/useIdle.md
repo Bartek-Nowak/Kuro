@@ -16,7 +16,7 @@ npx github:Bartek-Nowak/Kuro add useIdle
 ## Usage
 
 ```ts
-import { useIdle } from '@/composables/useIdle';
+import { useIdle } from '@/composables/kuro/useIdle';
 
 const { isIdle } = useIdle(300000); // default 5 minutes timeout
 ```

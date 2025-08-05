@@ -21,7 +21,7 @@ npx github:Bartek-Nowak/Kuro add useCopyToClipboard
 
 ```vue
 <script setup lang="ts">
-import { useCopyToClipboard } from '@/composables/useCopyToClipboard';
+import { useCopyToClipboard } from '@/composables/kuro/useCopyToClipboard';
 
 const { copy, success, error, isSupported } = useCopyToClipboard();
 

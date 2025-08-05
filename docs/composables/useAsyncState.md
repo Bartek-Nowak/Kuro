@@ -34,7 +34,7 @@ const { data, error, loading, execute } = useAsyncState<T>(asyncFn: () => Promis
 ## Usage example
 
 ```ts
-import { useAsyncState } from '@/composables/useAsyncState';
+import { useAsyncState } from '@/composables/kuro/useAsyncState';
 
 const fetchData = async () => {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');

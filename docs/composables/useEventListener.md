@@ -16,7 +16,7 @@ npx github:Bartek-Nowak/Kuro add useEventListener
 ## Usage
 
 ```ts
-import { useEventListener } from '@/composables/useEventListener';
+import { useEventListener } from '@/composables/kuro/useEventListener';
 
 const handler = (event: Event) => {
   console.log(event);
@@ -44,7 +44,7 @@ useEventListener(window, 'resize', handler);
 ```ts
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useEventListener } from '@/composables/useEventListener';
+import { useEventListener } from '@/composables/kuro/useEventListener';
 
 const divRef = ref<HTMLElement | null>(null);
 

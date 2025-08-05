@@ -17,7 +17,7 @@ npx github:Bartek-Nowak/Kuro add useFocusTrap
 
 ```vue
 <script setup lang="ts">
-import { useFocusTrap } from '@/composables/useFocusTrap';
+import { useFocusTrap } from '@/composables/kuro/useFocusTrap';
 
 const { containerRef } = useFocusTrap();
 </script>

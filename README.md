@@ -4,8 +4,8 @@
 This tool is designed to work via `npx`, not to be installed as a dependency.
 
 ```bash
-❌ npm install kuro    ← Wrong
-✅ npx kuro add ...    ← Correct
+❌ npm install kuro-ui    ← Wrong
+✅ npx kuro-ui add ...    ← Correct
 ```
 
 # Kuro
@@ -28,14 +28,14 @@ This tool is designed to work via `npx`, not to be installed as a dependency.
 Interactively install Tailwind CSS v4, add the necessary import to your main CSS file, and update your `vite.config.js`:
 
 ```bash
-npx github:Bartek-Nowak/Kuro init
+npx kuro-ui init
 ```
 
 ### 📦 Copy a Vue component
 Copies a component (e.g. Button.vue) into your project’s src/components directory:
 
 ```bash
-npx github:Bartek-Nowak/Kuro add button
+npx kuro-ui add button
 ```
 
 The CLI will prompt you to confirm installation and specify your main CSS file path (defaults to `src/assets/main.css`).

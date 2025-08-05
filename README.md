@@ -1,5 +1,13 @@
 ![Kuro](Kuro.png)
 
+## ❌ Don’t install this via npm install
+This tool is designed to work via `npx`, not to be installed as a dependency.
+
+```bash
+❌ npm install kuro    ← Wrong
+✅ npx kuro add ...    ← Correct
+```
+
 # Kuro
 
 📦 A minimalist CLI for copying ready-to-use Vue 3 components and optionally setting up Tailwind CSS v4.
@@ -56,14 +64,6 @@ Full documentation is available at: [Kuro](https://mellifluous-squirrel-4409cd.n
 - Node.js v18+
 
 - Vue 3 project (Vite-based)
-
-## ❌ Don’t install this via npm install
-This tool is designed to work via `npx`, not to be installed as a dependency.
-
-```bash
-❌ npm install kuro    ← Wrong
-✅ npx kuro add ...    ← Correct
-```
 
 ## 📝 License
 MIT © Bartłomiej Nowak

@@ -10,18 +10,16 @@ This tool is designed to work via `npx`, not to be installed as a dependency.
 
 # Kuro
 
-📦 A minimalist CLI for copying ready-to-use Vue 3 components and optionally setting up Tailwind CSS v4.
+📦 A minimalist CLI for copying ready-to-use Vue 3 components, composables, and utilities — plus optional Tailwind CSS v4 setup.
 
 ---
 
 ## ✨ Why Kuro?
 
-- 🧱 Instant Components – Copy clean, customizable Vue 3 components into your project.
-- 🎨 Tailwind CSS v4 Ready – Automatically installs and configures Tailwind v4.
-- 🧩 No Vendor Lock-In – You're copying code, not installing a black-box dependency.
-- ⚡ Blazing Fast Setup – No scaffolding, just the bits you need.
-
----
+- 🧱 Ready-to-use Components, Composables & Utils — Copy curated and tested Vue 3 components, composables, and utilities into your project instantly.
+- 🎨 Tailwind CSS v4 Ready — Automatically installs and configures Tailwind v4.
+- 🧩 No Vendor Lock-In — You're copying code, not installing a black-box dependency.
+- ⚡ Blazing Fast Setup — No scaffolding, just the bits you need.
 
 ## 🚀 Usage
 

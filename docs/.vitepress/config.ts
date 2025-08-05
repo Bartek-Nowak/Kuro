@@ -57,6 +57,7 @@ export default defineConfig({
           { text: 'useFocusTrap', link: '/composables/useFocusTrap' },
           { text: 'useIdle', link: '/composables/useIdle' },
           { text: 'useIntersectionObserver', link: '/composables/useIntersectionObserver' },
+          { text: 'usePageVisibility', link: '/composables/usePageVisibility' },
         ],
       },
     ],

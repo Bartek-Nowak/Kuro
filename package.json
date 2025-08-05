@@ -4,7 +4,20 @@
   "bin": {
     "kuro": "./bin/cli.js"
   },
+  "preferGlobal": true,
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bartek-Nowak/Kuro.git"
+  },
+  "homepage": "https://github.com/Bartek-Nowak/Kuro#readme",
+  "files": [
+    "bin/",
+    "meta.json",
+    "src/components",
+    "src/composables",
+    "src/utils"
+  ],
   "keywords": [
     "vue",
     "component",
@@ -25,7 +38,8 @@
     "type-check": "vue-tsc --build",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "preinstall": "node ./bin/block-install.js"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
@@ -48,3 +62,4 @@
     "vue-tsc": "^3.0.4"
   }
 }
+

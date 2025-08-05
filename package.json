@@ -2,7 +2,7 @@
   "name": "kuro-ui",
   "version": "1.0.0",
   "bin": {
-    "kuro": "./bin/cli.js"
+    "kuro-ui": "./bin/cli.js"
   },
   "preferGlobal": true,
   "type": "module",

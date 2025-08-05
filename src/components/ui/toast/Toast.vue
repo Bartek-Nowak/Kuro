@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { toasts, removeToast, getToastClasses } from '.';
-import { Button } from '@/components/ui/button';
-import { Text } from '@/components/ui/text';
+import { Button } from '../button';
+import { Text } from '../text';
 
 const props = defineProps<{ class?: string }>()
 

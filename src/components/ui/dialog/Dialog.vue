@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, watch } from 'vue'
 import { X } from 'lucide-vue-next';
-import { Button } from '@/components/ui/button'
+import { Button } from '../button'
 import { getDialogClasses, type DialogVariants } from '.';
 
 const isOpen = defineModel<boolean>('open', { default: false })

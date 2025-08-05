@@ -59,6 +59,7 @@ export default defineConfig({
           { text: 'useIntersectionObserver', link: '/composables/useIntersectionObserver' },
           { text: 'usePageVisibility', link: '/composables/usePageVisibility' },
           { text: 'useScrollDirection', link: '/composables/useScrollDirection' },
+          { text: 'useThrottleFn', link: '/composables/useThrottleFn' },
         ],
       },
     ],

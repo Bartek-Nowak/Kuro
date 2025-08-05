@@ -1,6 +1,6 @@
 {
   "name": "kuro-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "bin": {
     "kuro-ui": "./bin/cli.js"
   },

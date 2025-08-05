@@ -38,8 +38,7 @@
     "type-check": "vue-tsc --build",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
-    "preinstall": "node ./bin/block-install.js"
+    "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",

@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: "Kuro"
-  text: "Quickly copy UI components and streamline Tailwind integration"
-  tagline: "Minimalist CLI for Vue 3 components and Tailwind CSS v4 setup"
+  text: "Quickly copy and paste CLI"
+  tagline: "Minimalist CLI for Vue 3 components, composables, utils and Tailwind CSS v4 setup"
   image:
     src: /kuro-logo.png
     alt: Kuro logo
@@ -21,8 +21,8 @@ hero:
       link: https://github.com/Bartek-Nowak/Kuro
 
 features:
-  - title: Ready-to-use Vue 3 Components
-    details: Copy curated and tested UI components into your project instantly.
+  - title: Ready-to-use Vue 3 Components, Composables & Utils
+    details: Copy curated and tested UI components, composables, and utilities into your project instantly.
   - title: Tailwind CSS v4 Integration
     details: Interactive installation and automatic Vite config updates.
   - title: Minimal Setup, Maximum Productivity

@@ -6,12 +6,12 @@
 
 ---
 
-## ✨ Features
+## ✨ Why Kuro?
 
-- ✅ Quickly copy Vue 3 components from the curated `components/ui` library into your project.
-- 🎨 Interactive Tailwind CSS v4 installation and configuration.
-- ⚙️ Automatic update of your `vite.config.js` to include the Tailwind plugin.
-- 📁 Customizable CSS entry file path for Tailwind imports.
+- 🧱 Instant Components – Copy clean, customizable Vue 3 components into your project.
+- 🎨 Tailwind CSS v4 Ready – Automatically installs and configures Tailwind v4.
+- 🧩 No Vendor Lock-In – You're copying code, not installing a black-box dependency.
+- ⚡ Blazing Fast Setup – No scaffolding, just the bits you need.
 
 ---
 
@@ -34,10 +34,8 @@ npx github:Bartek-Nowak/Kuro add button
 
 The CLI will prompt you to confirm installation and specify your main CSS file path (defaults to `src/assets/main.css`).
 
-## 📷 Examples
-To preview available components in action:
-
-1. Clone the repo
+## 🖼️ Preview Components
+1. Clone the repository
 
 2. Install dependencies
 
@@ -49,19 +47,23 @@ cd Kuro
 npm install
 npm run dev
 ```
-
-This will launch a demo showcasing all components and their variants inside `App.vue`.
+Preview all components in `App.vue`.
 
 ## 📚 Documentation
 Full documentation is available at: [Kuro](https://mellifluous-squirrel-4409cd.netlify.app/)
 
 ## 📦 Requirements
-Node.js v18 or higher
+- Node.js v18+
 
-A Vue 3 project structured with Vite (for auto Vite config update)
+- Vue 3 project (Vite-based)
 
-## 🛠 Installation
-No installation required — just run via npx directly from GitHub.
+## ❌ Don’t install this via npm install
+This tool is designed to work via `npx`, not to be installed as a dependency.
+
+```bash
+❌ npm install kuro    ← Wrong
+✅ npx kuro add ...    ← Correct
+```
 
 ## 📝 License
-MIT
+MIT © Bartłomiej Nowak

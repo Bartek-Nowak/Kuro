@@ -4,7 +4,7 @@ Navigation component that displays the current page’s location within a site h
 
 ```vue
 <script setup lang="ts">
-import {Breadcrumb} from '@/components//kuro/breadcrumb';
+import { Breadcrumb } from '@/components/kuro/breadcrumb';
 </script>
 <template>
   <Breadcrumb
@@ -22,11 +22,12 @@ import {Breadcrumb} from '@/components//kuro/breadcrumb';
 ## Installation
 
 ::: code-group
-
-```bash
+```bash [npx via npm]
+npx kuro-ui add breadcrumb
+```
+```bash [npx via GitHub]
 npx github:Bartek-Nowak/Kuro add breadcrumb
 ```
-
 :::
 
 ## Usage

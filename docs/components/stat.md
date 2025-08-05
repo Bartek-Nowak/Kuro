@@ -2,7 +2,7 @@
 
 ```vue
 <script setup lang="ts">
-import {Stat} from '@/components/kuro/stat';
+import { Stat } from '@/components/kuro/stat';
 </script>
 
 <template>
@@ -18,7 +18,10 @@ import {Stat} from '@/components/kuro/stat';
 ## Installation
 
 ::: code-group
-```bash
+```bash [npx via npm]
+npx kuro-ui add stat
+```
+```bash [npx via GitHub]
 npx github:Bartek-Nowak/Kuro add stat
 ```
 :::

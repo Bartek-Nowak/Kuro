@@ -4,7 +4,7 @@ A toggle component for enabling or disabling a setting.
 
 ```vue
 <script setup lang="ts">
-import {Switch} from '@/components/kuro/switch';
+import { Switch } from '@/components/kuro/switch';
 </script>
 
 <template>
@@ -15,11 +15,12 @@ import {Switch} from '@/components/kuro/switch';
 ## Installation
 
 ::: code-group
-
-```bash
+```bash [npx via npm]
+npx kuro-ui add switch
+```
+```bash [npx via GitHub]
 npx github:Bartek-Nowak/Kuro add switch
 ```
-
 :::
 
 ## Props

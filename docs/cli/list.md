@@ -2,9 +2,14 @@
 
 Displays a list of all available components.
 
-```bash
+::: code-group
+```bash [npx via npm]
+npx kuro-ui list
+```
+```bash [npx via GitHub]
 npx github:Bartek-Nowak/Kuro list
 ```
+:::
 
 ## 📋 What does it display?
 

@@ -15,7 +15,10 @@ import { Alert } from '@/components/kuro/alert';
 ## Installation
 
 ::: code-group
-```bash
+```bash [npx via npm]
+npx kuro-ui add allert
+```
+```bash [npx via GitHub]
 npx github:Bartek-Nowak/Kuro add allert
 ```
 :::

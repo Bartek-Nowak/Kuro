@@ -16,7 +16,10 @@ import { Callout } from '@/components/kuro/callout';
 ## Installation
 
 ::: code-group
-```bash
+```bash [npx via npm]
+npx kuro-ui add callout
+```
+```bash [npx via GitHub]
 npx github:Bartek-Nowak/Kuro add callout
 ```
 :::

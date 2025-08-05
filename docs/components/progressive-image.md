@@ -19,8 +19,11 @@ import { ProgressiveImage } from '@/components/kuro/progressive-image';
 ## Installation
 
 ::: code-group
-```bash
-npx github:Bartek-Nowak/Kuro add progressive-image.md
+```bash [npx via npm]
+npx kuro-ui add progressive-image
+```
+```bash [npx via GitHub]
+npx github:Bartek-Nowak/Kuro add progressive-image
 ```
 :::
 

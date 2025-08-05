@@ -33,7 +33,10 @@ const open = ref(false)
 ## Installation
 
 ::: code-group
-```bash
+```bash [npx via npm]
+npx kuro-ui add dialog
+```
+```bash [npx via GitHub]
 npx github:Bartek-Nowak/Kuro add dialog
 ```
 :::

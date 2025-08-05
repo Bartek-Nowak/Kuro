@@ -4,7 +4,7 @@ A circular profile image component with optional placeholder initials.
 
 ```vue
 <script setup lang="ts">
-import {Avatar} from '@/components/kuro/avatar';
+import { Avatar } from '@/components/kuro/avatar';
 </script>
 
 <template>
@@ -15,11 +15,12 @@ import {Avatar} from '@/components/kuro/avatar';
 ## Installation
 
 ::: code-group
-
-```bash
+```bash [npx via npm]
+npx kuro-ui add avatar
+```
+```bash [npx via GitHub]
 npx github:Bartek-Nowak/Kuro add avatar
 ```
-
 :::
 
 ## Variants and Sizes

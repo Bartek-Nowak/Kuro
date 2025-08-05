@@ -8,9 +8,14 @@ Additionally, it checks for other component dependencies declared in the compone
 
 ## 🧪 Usage example:
 
-```bash
+::: code-group
+```bash [npx via npm]
+npx kuro-ui add button
+```
+```bash [npx via GitHub]
 npx github:Bartek-Nowak/Kuro add button
 ```
+:::
 
 This will:
 

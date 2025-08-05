@@ -4,9 +4,14 @@ This command initializes your project with required dependencies and configurati
 
 ## Usage
 
-```bash
+::: code-group
+```bash [npx via npm]
+npx kuro-ui init
+```
+```bash [npx via GitHub]
 npx github:Bartek-Nowak/Kuro init
 ```
+:::
 
 ## What it does
 

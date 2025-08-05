@@ -2,7 +2,16 @@
 
 Detects user inactivity after a specified timeout by listening to user interaction events.
 
----
+## Installation
+
+::: code-group
+```bash [npx via npm]
+npx kuro-ui add useIdle
+```
+```bash [npx via GitHub]
+npx github:Bartek-Nowak/Kuro add useIdle
+```
+:::
 
 ## Usage
 

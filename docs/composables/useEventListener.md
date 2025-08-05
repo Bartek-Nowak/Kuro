@@ -2,6 +2,17 @@
 
 A Vue 3 composable that attaches an event listener to a target element or object and automatically cleans it up when the component unmounts.
 
+## Installation
+
+::: code-group
+```bash [npx via npm]
+npx kuro-ui add useEventListener
+```
+```bash [npx via GitHub]
+npx github:Bartek-Nowak/Kuro add useEventListener
+```
+:::
+
 ## Usage
 
 ```ts

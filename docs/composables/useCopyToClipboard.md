@@ -6,6 +6,17 @@ A Vue 3 composable to copy text to the clipboard with reactive status tracking.
 
 This composable provides a simple API to copy text to the user's clipboard, while tracking whether the Clipboard API is supported, if the copy operation succeeded, or if an error occurred.
 
+## Installation
+
+::: code-group
+```bash [npx via npm]
+npx kuro-ui add useCopyToClipboard
+```
+```bash [npx via GitHub]
+npx github:Bartek-Nowak/Kuro add useCopyToClipboard
+```
+:::
+
 ## Usage example
 
 ```vue

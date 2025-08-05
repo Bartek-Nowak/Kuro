@@ -2,6 +2,17 @@
 
 A Vue 3 composable that traps keyboard focus within a specified container element, preventing focus from escaping when using Tab or Shift+Tab keys. Useful for modals, dialogs, or any UI that requires focus to be constrained.
 
+## Installation
+
+::: code-group
+```bash [npx via npm]
+npx kuro-ui add useFocusTrap
+```
+```bash [npx via GitHub]
+npx github:Bartek-Nowak/Kuro add useFocusTrap
+```
+:::
+
 ## Usage
 
 ```vue

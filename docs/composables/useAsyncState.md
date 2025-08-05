@@ -7,6 +7,16 @@ A Vue composable for managing asynchronous state.
 
 `useAsyncState` accepts an asynchronous function and returns reactive refs: `data`, `error`, `loading`, and an `execute` function that runs the async function and updates the state accordingly.
 
+## Installation
+
+::: code-group
+```bash [npx via npm]
+npx kuro-ui add useAsyncState
+```
+```bash [npx via GitHub]
+npx github:Bartek-Nowak/Kuro add useAsyncState
+```
+:::
 
 ## API
 

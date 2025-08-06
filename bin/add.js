@@ -9,11 +9,13 @@ const recursiveTypes = ['component'];
 const typeToSourceDirMap = {
   component: (name) => `src/components/ui/${name}`,
   composable: (name) => `src/composables/${name}.ts`,
+  util: (name) => `src/utils/${name}.ts`,
 };
 
 const typeToDestDirMap = {
   component: (name) => `src/components/kuro/${name}`,
   composable: (name) => `src/composables/kuro/${name}.ts`,
+  util: (name) => `src/utils/kuro/${name}.ts`,
 };
 
 export const add = async (name, _componentsDir, dirname) => {

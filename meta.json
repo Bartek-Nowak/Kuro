@@ -197,5 +197,13 @@
     "dependencies": [],
     "requires": [],
     "type": "composable"
+  },
+  {
+    "name": "retryPromise",
+    "path": "retryPromise",
+    "description": "Utility function for retrying asynchronous operations with configurable retries, delay, and retry conditions.",
+    "dependencies": [],
+    "requires": [],
+    "type": "util"
   }
 ]
